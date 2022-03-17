@@ -31,6 +31,7 @@ html
 {
 	display: flex;
 	justify-content: center;
+	list-style-type: none;
 }
 
 #nav li
@@ -59,7 +60,13 @@ html
 	font-size: 17px;
 }
 
-
+/* search button */
+#nav .search-btn
+{
+	font-size: 14px;
+	line-height: 44px;
+	
+}
 
 
 

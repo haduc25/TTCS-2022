@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apple</title>
     <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="./public/fonts/themify-icons/themify-icons.css">
     <script src="https://kit.fontawesome.com/a70346401e.js" crossorigin="anonymous"></script>
+
+
 </head>
 <body>
 	<!-- ============ Begin: Main ============ -->
     <div id="main">
         <!-- Header -->
         <div id="header">
-            <!-- Begin: Nav -->
             <ul id="nav">
                 <li><a href="#"><i class="fa-brands fa-apple"></i></a></li>
                 <li><a href="#">Mac</a></li>
@@ -25,12 +27,10 @@
                 <li><a href="#">Only on Apple</a></li>
                 <li><a href="#">Support</a></li>
                 <li><a href="#">Where to Buy</a></li>
-            </ul>
-            <!-- End: Nav -->
+                <li><a href="#"><i class="ti-search search-btn"></i></a></li>
 
-            <div class="search-btn">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
+            </ul>
+
         </div>
 
 
