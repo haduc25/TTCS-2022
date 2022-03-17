@@ -7,6 +7,7 @@
     <title>Apple</title>
     <link rel="stylesheet" href="./public/css/style.css">
     <link rel="stylesheet" href="./public/fonts/themify-icons/themify-icons.css">
+    <link rel="icon" href="./public/icons/fav-icon.png" type="image/x-icon" />
     <script src="https://kit.fontawesome.com/a70346401e.js" crossorigin="anonymous"></script>
 
 
@@ -28,25 +29,25 @@
                 <li><a href="#">Support</a></li>
                 <li><a href="#">Where to Buy</a></li>
                 <li><a href="#"><i class="ti-search search-btn"></i></a></li>
-
             </ul>
 
         </div>
 
 
-
-
-
-
-
-
-
-
-
-
         <!-- Slider -->
         <div id="slider">
+            <div class="text-content">
+                <a href="#">
+                    <h2 class="text-heading">iPhone 13 Pro</h2>
+                    <h2 class="sub-text">Oh. So. Pro.</h2>
+                </a>
+                <div class="buy-learn-btn">
+                    <a href="#">Learn More</a> <i class="ti-angle-right"></i>
+                    <a href="#">Buy</a> <i class="ti-angle-right"></i>
+                </div>
 
+			</div>
+                <!-- <a href="#"> <img src="./public/img/slider/ip_13.jpg" alt=""></a> -->
         </div>
         <!-- Content -->
         <div id="content">

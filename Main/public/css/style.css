@@ -65,21 +65,64 @@ html
 {
 	font-size: 14px;
 	line-height: 44px;
-	
 }
 
 
-
-
-
-
-
-
-
+/* ============ Slider ============ */
 #slider
 {
+	margin-top: 44px;
+	padding-top: 50%;
+	position: relative;
+}
+
+#slider .text-content
+{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 32px;
 
 }
+
+#slider > .text-content > a
+{
+	text-decoration: none;
+	color: #000;
+
+}
+
+#slider .buy-learn-btn
+{
+	color: #0066CC;
+	font-size: 21px;
+}
+
+#slider .buy-learn-btn a
+{
+	text-decoration: none;
+}
+
+#slider .buy-learn-btn i
+{
+	font-size: 12px;
+	font-weight: 900;
+	cursor: pointer;
+}
+
+#slider .text-heading
+{
+	font-size: 40px;
+}
+
+
+
+
+
+
+
+
+
 
 #content
 {
