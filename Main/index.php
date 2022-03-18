@@ -36,7 +36,9 @@
 
         <!-- Slider -->
         <div id="slider">
-            <div class="text-content">
+            <img src="./public/img/slider/ip_13.jpg" alt="">
+
+            <!-- <div class="text-content">
                 <a href="#">
                     <h2 class="text-heading">iPhone 13 Pro</h2>
                     <h2 class="sub-text">Oh. So. Pro.</h2>
@@ -46,9 +48,31 @@
                     <a href="#">Buy</a> <i class="ti-angle-right"></i>
                 </div>
 
-			</div>
+                
+			</div> -->
+            
+
+
+
                 <!-- <a href="#"> <img src="./public/img/slider/ip_13.jpg" alt=""></a> -->
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <!-- Content -->
         <div id="content">
             <div class="collections-content">

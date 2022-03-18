@@ -25,6 +25,7 @@ html
 	top: 0;
 	left: 0;
 	right: 0;
+	z-index: 1;
 }
 
 #nav 
@@ -72,8 +73,21 @@ html
 #slider
 {
 	margin-top: 44px;
-	padding-top: 50%;
+	/* padding-top: 50%; */
+	/* position: relative; */
+	/* top: 0;
+	left: 0; */
+}
+
+#slider img
+{
 	position: relative;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100vw;
+	height: 100vh;
+	object-fit: cover; /* or object-fit: contain; */
 }
 
 #slider .text-content
@@ -114,6 +128,9 @@ html
 {
 	font-size: 40px;
 }
+
+
+
 
 
 
