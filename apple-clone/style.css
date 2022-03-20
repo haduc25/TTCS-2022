@@ -115,6 +115,10 @@ header ul li img {
   z-index: 3;
 }
 
+
+
+
+
 .top__title h1 {
   font-size: 52px;
   font-weight: 500;
@@ -150,6 +154,56 @@ header ul li img {
 }
 
 .top__title--links a img {
+  width: 12px;
+}
+
+
+.top__title2 {
+  position: absolute;
+  top: 0;
+  left: 40%;
+  right: 40%;
+  margin-top: 52px;
+  color: var(--greyDark2);
+  text-align: center;
+  z-index: 3;
+}
+
+.top__title2 h1 {
+  font-size: 52px;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+
+.top__title2 h3 {
+  margin-top: 3px;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.top__title2 h4 {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+  color: #d01f2a;
+}
+
+.top__title2--links {
+  margin-top: 12px;
+}
+
+.top__title2--links a {
+  font-size: 21px;
+  font-weight: 400;
+  color: var(--a);
+}
+
+.top__title2--links a:nth-child(2) {
+  margin-left: 30px;
+}
+
+.top__title2--links a img {
   width: 12px;
 }
 
@@ -215,7 +269,7 @@ header ul li img {
 
 
 .section22 {
-  height: 600x;
+  height: 600px;
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -242,6 +296,18 @@ header ul li img {
   right: 0;
   width: 100%;
   height: 600px;
+}
+
+.section22 h1 {
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.section22 h1 img {
+  width: 50px;
+  /* margin-right: 5px;
+  margin-top: 5px; */
 }
 
 .section3 {
