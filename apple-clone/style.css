@@ -34,9 +34,14 @@ a:hover {
   color: var(--text) !important;
 }
 
+.white {
+  color: var(--white) !important;
+}
+
 .dark-blue {
   color: #06c !important;
 }
+
 
 header {
   width: 100%;
