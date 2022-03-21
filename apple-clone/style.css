@@ -69,21 +69,29 @@ header ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  color: var(--greyLight);
-}
-
-header ul li {
-  cursor: pointer;
   list-style: none;
 }
 
-header ul li:hover {
+header ul li a{
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--greyLight);
+}
+
+header ul li a:hover {
   color: #fff;
+  text-decoration: none;
 }
 
 header ul li img {
   width: 18px;
   height: 18px;
+  opacity: .8;
+}
+
+header ul li img:hover {
+  opacity: 1;
+
 }
 
 .information {
