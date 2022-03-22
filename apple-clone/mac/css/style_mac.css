@@ -123,19 +123,32 @@ header ul li img:hover {
       -ms-flex-pack: justify;
           justify-content: space-between;
   list-style: none;
+  color: #000;
 }
 
 
 
 .container .under-header img {
-    width: 52px;
-    height: 54px;
-    opacity: .8;
+    margin-left: 5px;
+    width: 45px;
+    height: 50px;
 }
 
+.text-under-logos
+{
+  font-size: 10px;
+  text-align: center;
+}
 
+.container .under-header a {
+  text-decoration: none;
+  color: var(--text);
+}
 
-
+.container .under-header a:hover {
+  color: var(--a);
+  opacity: .8;
+}
 
 
 
