@@ -557,7 +557,7 @@ header ul li img:hover {
   width: 100%;
   height: 610px;
   overflow: hidden;
-  margin-bottom: 70px;
+  margin-bottom: -20px; /*section duoi bu them 20px*/
 }
 
 .background3 {
