@@ -384,8 +384,8 @@ header ul li img:hover {
 /*BEGIN: right title*/
 
 .right_title {
-  margin-top: 275px;
-  margin-left: 40%;
+  margin-top: 13%;
+  margin-left: 45%;
   text-align: center;
   z-index: 3;
 }
@@ -410,8 +410,9 @@ header ul li img:hover {
 
 .right_title p {
   margin-top: 3px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
+  padding: 0 220px;
   color: var(--greyDark2);
 }
 
