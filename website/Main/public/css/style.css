@@ -1,0 +1,152 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html
+{
+	scroll-behavior: smooth;
+	/* font-family: "Segoe UI", Arial, sans-serif; */
+	font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+#main
+{
+
+}
+
+/* ============ Header ============ */
+#header
+{
+	height: 44px;
+	background-color: rgba(0,0,0,0.8);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+}
+
+#nav 
+{
+	display: flex;
+	justify-content: center;
+	list-style-type: none;
+}
+
+#nav li
+{
+	display: inline-block;
+
+}
+
+#nav li a
+{
+	text-decoration: none;
+	color: #F5F5F7;
+	font-size: 12px;
+	padding: 0px 24px;
+	line-height: 44px;
+	opacity: 0.8;
+}
+
+#nav li a:hover
+{
+	opacity: 1;
+}
+
+#nav > li > a > i
+{
+	font-size: 17px;
+}
+
+/* search button */
+#nav .search-btn
+{
+	font-size: 14px;
+	line-height: 44px;
+}
+
+
+/* ============ Slider ============ */
+#slider
+{
+	margin-top: 44px;
+	/* padding-top: 50%; */
+	/* position: relative; */
+	/* top: 0;
+	left: 0; */
+}
+
+#slider img
+{
+	position: relative;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100vw;
+	height: 100vh;
+	object-fit: cover; /* or object-fit: contain; */
+}
+
+#slider .text-content
+{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 32px;
+
+}
+
+#slider > .text-content > a
+{
+	text-decoration: none;
+	color: #000;
+
+}
+
+#slider .buy-learn-btn
+{
+	color: #0066CC;
+	font-size: 21px;
+}
+
+#slider .buy-learn-btn a
+{
+	text-decoration: none;
+}
+
+#slider .buy-learn-btn i
+{
+	font-size: 12px;
+	font-weight: 900;
+	cursor: pointer;
+}
+
+#slider .text-heading
+{
+	font-size: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#content
+{
+
+}
+
+#footer
+{
+
+}
