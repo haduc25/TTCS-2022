@@ -5,7 +5,7 @@ class BaseModel
     public $conn;
     public function __construct()
     {
-        $this-> conn = new PDO("mysql:host=localhost; dbname=project_sp; charset=utf8",'root', '');
+        $this-> conn = new PDO("mysql:host=localhost; dbname=web_gtsp; charset=utf8",'root', '');
     }
 
 
@@ -13,7 +13,8 @@ class BaseModel
     public static function all()
     {
         $model = new static();
-        $sql = "select * from $model->tableName";
+        // $sql = "select * from $model->tableName";
+        $sql = "select * from $model->tName"; //tName: table name
         $stmt = $model->conn->prepare($sql);
         $stmt->execute();
         $rs = $stmt->fetchAll(PDO::FETCH_CLASS, get_class($model));
