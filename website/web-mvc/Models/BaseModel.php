@@ -22,21 +22,21 @@ class BaseModel
     }
 
     //select 1 items from sql
-    public static function get1items()
+    public static function get1items($id_sp, $id_dm)
     {
         $model = new static();
-        $sql = "select * from $model->tName where id_sp = 1 and id_dm = 3";
+        $sql = "select * from $model->tName where id_sp = $id_sp and id_dm = $id_dm";
         $stmt = $model->conn->prepare($sql);
         $stmt->execute();
         $rs = $stmt->fetchAll(PDO::FETCH_CLASS, get_class($model));
         return $rs;
     }
 
-    //select 3 items from sql
+    //select 3 items detail from sql
     public static function get3items()
     {
         $model = new static();
-        $sql = "select * from $model->tName where id_dm = 3";
+        $sql = "select * from `products_detail`, `products` where products_detail.id_sp = products.id_sp";
         $stmt = $model->conn->prepare($sql);
         $stmt->execute();
         $rs = $stmt->fetchAll(PDO::FETCH_CLASS, get_class($model));

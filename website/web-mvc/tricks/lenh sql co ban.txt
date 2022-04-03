@@ -1,0 +1,6 @@
+SELECT Donhang.DonhangID, Khachhang.Hoten, Donhang.Ngaydathang
+FROM Donhang, Khachhang
+WHERE Donhang.KhachhangID=Khachhang.KhachhangID
+
+
+SELECT * FROM `products_detail`, `products` WHERE products_detail.id_sp = products.id_sp

@@ -123,8 +123,8 @@
                         ex:
                         array(1) { [0]=> object(Products)#5 (9) { ["tName"]=> string(8) "products" ["col"]=> array(1) { [0]=> string(47) "id_sp, id_dm, ten_sp, sub_ten_sp, img_sp, sl_sp" } ["conn"]=> object(PDO)#6 (0) { } ["id_sp"]=> string(1) "1" ["id_dm"]=> string(1) "3" ["ten_sp"]=> string(13) "iPhone 13 Pro" ["sub_ten_sp"]=> string(12) "Oh. So. Pro." ["img_sp"]=> string(0) "" ["sl_sp"]=> string(2) "10" } }
                     -->
-                      <h3 style="color: #1d1d1f;"><?= var_dump($prd1item[0]->ten_sp); exit; ?></h3>
-                      <h1 style="color: #1d1d1f;">Supercharged for pros.</h1>
+                      <h3 style="color: #1d1d1f;"><?= $prd1item[0]->ten_sp ?></h3>
+                      <h1 style="color: #1d1d1f;"><?= $prd1item[0]->sub_ten_sp ?></h1>
                       <div class="top__title--links">
                         <a class="btn-buy" href="">Mua ngay</a>
                         <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
@@ -142,14 +142,19 @@
                     <div class="container-products">
                         <!-- Begin: Note-nook -->
                         <div class="note-book"">
+
+                        <?php foreach ($prd3item as $prd3) 
+                        { ?>
+
                           <div class="note-book-details">
                             <img src="./public/svg/mac/mac_air.png" alt="mac os" />
                             <div class="color-icon">
                                 <img src="./public/svg/mac/icon_color_2.png" alt="color" />
                             </div>
 
-                            <h3>MacBook Air</h3>
-                            
+                            <!-- <h3>MacBook Air</h3> -->
+                            <h3><?= $prd3->ten_sp ?></h3>
+
                             <div class="buy-btn-details">
                                 <a class="btn-buy" href="">Mua ngay</a>
                                 <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
@@ -159,54 +164,65 @@
                             <div class="details-pro">
                               <div class="detail-chip">
                                   <img src="./public/svg/mac/icons/icon_m1.png" alt="chipset">
-                                  <p style="padding-bottom: 20px;">Apple M1 chip</p>
+                                  <!-- <p style="padding-bottom: 20px;">Apple M1 chip</p> -->
+                                  <p style="padding-bottom: 20px;"><?= $prd3->chipset ?></p>
 
                                   <!-- cpu -->
                                   <div class="core-cpu">
-                                    <h4>8-core</h4>
+                                    <!-- <h4>8-core</h4> -->
+                                    <h4><?= $prd3->cpu ?></h4>
                                     <p>CPU</p>
                                   </div>
 
                                   <!-- gpu -->
                                   <div class="core-gpu">
                                     <p>Up to</p>
-                                    <h4>8-core</h4>
+                                    <!-- <h4>8-core</h4> -->
+                                    <h4><?= $prd3->gpu ?></h4>
                                     <p>GPU</p>
                                   </div>
 
                                   <!-- memory -->
                                   <div class="memory">
                                     <img src="./public/svg/mac/icons/icon_unified_memory.png" alt="memory">
-                                    <p>Up to 16GB unified memory</p>
+                                    <!-- <p>Up to 16GB unified memory</p> -->
+                                    <p><?= $prd3->memory ?></p>
 
-                                    <h4>2TB</h4>
+                                    <!-- <h4>2TB</h4> -->
+                                    <h4><?= $prd3->storage ?></h4>
                                     <p>Maximum configurable storage</p>
 
                                     <!-- display -->
-                                    <h4>13.3”</h4>
-                                    <p>Retina display</p>
+                                    <!-- <h4>13.3”</h4> -->
+                                    <h4><?= $prd3->screen ?></h4>
+                                    <!-- <p>Retina display</p> -->
+                                    <p><?= $prd3->sub_screen ?></p>
                                   </div>
 
                                   <!-- battery -->
                                   <div class="battery">
                                     <img src="./public/svg/mac/icons/icon_battery.png" alt="battery">
-                                    <p>Up to 18 hours battery life</p>
+                                    <!-- <p>Up to 18 hours battery life</p> -->
+                                    <p><?= $prd3->battery ?></p>
                                   </div>
 
                                   <!-- camera -->
                                   <div class="camera">
                                     <img src="./public/svg/mac/icons/icon_camera.png" alt="camera">
-                                    <p>720p FaceTime HD camera</p>
+                                    <!-- <p>720p FaceTime HD camera</p> -->
+                                    <p><?= $prd3->camera ?></p>
 
                                     <!-- Weight -->
-                                    <h4>1.29kg</h4>
+                                    <!-- <h4>1.29kg</h4> -->
+                                    <h4><?= $prd3->weight ?></h4>
                                     <p>Weight</p>
                                   </div>
 
                                   <!-- Touch ID -->
                                   <div class="touch-id">
                                     <img src="./public/svg/mac/icons/icon_touch_id.png" alt="camera">
-                                    <p>Touch ID</p>
+                                    <!-- <p>Touch ID</p> -->
+                                    <p><?= $prd3->sensor_id ?></p>
                                   </div>
 
 
@@ -216,154 +232,7 @@
                             
                           </div>
 
-                          <div class="note-book-details">
-                            <img src="./public/svg/mac/detail_mac_pro_13.png" alt="mac os" />
-                            <div class="color-icon">
-                                <img src="./public/svg/mac/icon_color_2.png" alt="color" />
-                            </div>
-
-                            <h3>MacBook Pro 13”</h3>
-                            
-                            <div class="buy-btn-details">
-                                <a class="btn-buy" href="">Mua ngay</a>
-                                <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
-                            </div>
-                            
-                            <!-- detail -->
-                            <div class="details-pro">
-                              <div class="detail-chip">
-                                  <img src="./public/svg/mac/icons/icon_m1.png" alt="chipset">
-                                  <p style="padding-bottom: 20px;">Apple M1 chip</p>
-
-                                  <!-- cpu -->
-                                  <div class="core-cpu">
-                                    <h4>8-core</h4>
-                                    <p>CPU</p>
-                                  </div>
-
-                                  <!-- gpu -->
-                                  <div class="core-gpu">
-                                    <p>Up to</p>
-                                    <h4>8-core</h4>
-                                    <p>GPU</p>
-                                  </div>
-
-                                  <!-- memory -->
-                                  <div class="memory">
-                                    <img src="./public/svg/mac/icons/icon_unified_memory.png" alt="memory">
-                                    <p>Up to 16GB unified memory</p>
-
-                                    <h4>2TB</h4>
-                                    <p>Maximum configurable storage</p>
-
-                                    <!-- display -->
-                                    <h4>13.3”</h4>
-                                    <p>Retina display</p>
-                                  </div>
-
-                                  <!-- battery -->
-                                  <div class="battery">
-                                    <img src="./public/svg/mac/icons/icon_battery.png" alt="battery">
-                                    <p>Up to 20 hours battery life</p>
-                                  </div>
-
-                                  <!-- camera -->
-                                  <div class="camera">
-                                    <img src="./public/svg/mac/icons/icon_camera.png" alt="camera">
-                                    <p>720p FaceTime HD camera</p>
-
-                                    <!-- Weight -->
-                                    <h4>1.4kg</h4>
-                                    <p>Weight</p>
-                                  </div>
-
-                                  <!-- Touch ID -->
-                                  <div class="touch-id">
-                                    <img src="./public/svg/mac/icons/icon_touch_id_touch_bar.png" alt="camera">
-                                    <p>Touch Bar and Touch ID</p>
-                                  </div>
-
-
-                              </div>
-
-                            </div>
-                            
-                          </div>
-                          <div class="note-book-details">
-                            <img src="./public/svg/mac/detail_mac_pro_14_16.png" alt="mac os" />
-                            <div class="color-icon">
-                                <img src="./public/svg/mac/icon_color_2.png" alt="color" />
-                            </div>
-
-                            <h3>MacBook Pro 14” and 16”</h3>
-                            
-                            <div class="buy-btn-details">
-                                <a class="btn-buy" href="">Mua ngay</a>
-                                <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
-                            </div>
-                            
-                            <!-- detail -->
-                            <div class="details-pro">
-                              <div class="detail-chip">
-                                  <img src="./public/svg/mac/icons/icon_m1_pro_max.png" alt="chipset">
-                                  <p style="padding-bottom: 20px;">Apple M1 Pro chip or Apple M1 Max chip</p>
-
-                                  <!-- cpu -->
-                                  <div class="core-cpu">
-                                    <h4>10-core</h4>
-                                    <p>CPU</p>
-                                  </div>
-
-                                  <!-- gpu -->
-                                  <div class="core-gpu">
-                                    <p>Up to</p>
-                                    <h4>32-core</h4>
-                                    <p>GPU</p>
-                                  </div>
-
-                                  <!-- memory -->
-                                  <div class="memory">
-                                    <img src="./public/svg/mac/icons/icon_unified_memory.png" alt="memory">
-                                    <p>Up to 64GB unified memory</p>
-
-                                    <h4>8TB</h4>
-                                    <p>Maximum configurable storage</p>
-
-                                    <!-- display -->
-                                    <h4>14.2” or 16.2”</h4>
-                                    <p>Liquid Retina XDR display</p>
-                                  </div>
-
-                                  <!-- battery -->
-                                  <div class="battery">
-                                    <img src="./public/svg/mac/icons/icon_battery.png" alt="battery">
-                                    <p>Up to 21 hours battery life</p>
-                                  </div>
-
-                                  <!-- camera -->
-                                  <div class="camera">
-                                    <img src="./public/svg/mac/icons/icon_camera.png" alt="camera">
-                                    <p>1080p FaceTime HD camera</p>
-
-                                    <!-- Weight -->
-                                    <h4>1.6kg or 2.1kg</h4>
-                                    <p>Weight</p>
-                                  </div>
-
-                                  <!-- Touch ID -->
-                                  <div class="touch-id">
-                                    <img src="./public/svg/mac/icons/icon_touch_id.png" alt="camera">
-                                    <p>Touch ID</p>
-                                  </div>
-
-
-                              </div>
-
-                            </div>
-                            
-                          </div>
-
-                          
+                          <?php } ?> 
 
 
                         </div>
