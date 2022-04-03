@@ -21,6 +21,28 @@ class BaseModel
         return $rs;
     }
 
+    //select 1 items from sql
+    public static function get1items()
+    {
+        $model = new static();
+        $sql = "select * from $model->tName where id_sp = 1 and id_dm = 3";
+        $stmt = $model->conn->prepare($sql);
+        $stmt->execute();
+        $rs = $stmt->fetchAll(PDO::FETCH_CLASS, get_class($model));
+        return $rs;
+    }
+
+    //select 3 items from sql
+    public static function get3items()
+    {
+        $model = new static();
+        $sql = "select * from $model->tName where id_dm = 3";
+        $stmt = $model->conn->prepare($sql);
+        $stmt->execute();
+        $rs = $stmt->fetchAll(PDO::FETCH_CLASS, get_class($model));
+        return $rs;
+    }
+
 
     //insert
     public function insert(){

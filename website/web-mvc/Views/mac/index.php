@@ -112,7 +112,18 @@
                     ></div>
 
                     <div class="top__title">
-                      <h3 style="color: #1d1d1f;">MacBook Pro</h3>
+                      <!-- <h3 style="color: #1d1d1f;">MacBook Pro</h3> -->
+                      <!-- cach lay du lieu u bien trong 1 obj -> trong 1 array: var_dump($prd1item[0]->ten_sp);
+                        1. var_dump bien ra
+                        2. neu o trong 1 obj & 1 array
+                        3. [0] truy cap vao obj 
+                        4. goi ten pt trong mang
+
+
+                        ex:
+                        array(1) { [0]=> object(Products)#5 (9) { ["tName"]=> string(8) "products" ["col"]=> array(1) { [0]=> string(47) "id_sp, id_dm, ten_sp, sub_ten_sp, img_sp, sl_sp" } ["conn"]=> object(PDO)#6 (0) { } ["id_sp"]=> string(1) "1" ["id_dm"]=> string(1) "3" ["ten_sp"]=> string(13) "iPhone 13 Pro" ["sub_ten_sp"]=> string(12) "Oh. So. Pro." ["img_sp"]=> string(0) "" ["sl_sp"]=> string(2) "10" } }
+                    -->
+                      <h3 style="color: #1d1d1f;"><?= var_dump($prd1item[0]->ten_sp); exit; ?></h3>
                       <h1 style="color: #1d1d1f;">Supercharged for pros.</h1>
                       <div class="top__title--links">
                         <a class="btn-buy" href="">Mua ngay</a>
