@@ -7,7 +7,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./public/css/home/style.css" />
+    <link rel="stylesheet" href="./public/css/style.css" />
     <link rel="icon" href="./public/img/icons/fav-icon-apple.png" type="image/x-icon" />
     <title>Apple (Hoàng Anh)</title>
   </head>
@@ -16,8 +16,8 @@
     <header>
       <ul>
         <!-- <li><img src="./svg/apple.svg" alt="apple" /></li> -->
-        <li><a href="./index.html">Trang chủ</a></li> 
-        <li><a href="mac/index.html">Mac</a></li>
+        <li><a href="">Trang chủ</a></li> 
+        <li><a href="./mac">Mac</a></li>
         <li><a href="iPad/index.html">iPad</a></li>
         <li><a href="iPhone/index.html">iPhone</a></li>
         <li><a href="">Watch</a></li>
@@ -45,8 +45,8 @@
     <!-- ========================================LAY DU LIEU========================================  -->
     <?php 
         // prd: product
-        foreach ($prds as $prd)
-    {?>
+    //     foreach ($prds as $prd)
+    // {?>
     <!-- SECTIONS -->
     <section class="section1">
       <div
@@ -55,8 +55,8 @@
       ></div>
 
       <div class="top__title">
-        <h1 style="color: #f5f5f7;"><?=$prd->ten_sp ?> </h1>
-        <h3 style="color: #f5f5f7;"><?=$prd->sub_ten_sp ?> </h3>
+        <h1 style="color: #f5f5f7;">iPhone 13 Pro </h1>
+        <h3 style="color: #f5f5f7;">Oh. So. Pro. </h3>
         <div class="top__title--links">
           <a href=""
             >Xem thêm <img src="./svg/right-arrow-blue.svg" alt=""
@@ -285,7 +285,6 @@
       </div>
     </section>
 
-    <?php } ?>
     <!-- ========================================END-TAM THOI DEN DAY: LAY DU LIEU========================================  -->
 
 

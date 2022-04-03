@@ -3,6 +3,7 @@
     $url = isset($_GET['url']) == true ? $_GET['url']:"/";
 
     require_once './Controllers/HomeController.php';
+    require_once './Controllers/ProductsController.php';
 
 
     switch($url)
@@ -10,7 +11,12 @@
         case '/':
             $ctl = new HomeController();
             //goi index trong HomeController
-            $ctl -> index();
+            $ctl->index();
+            break;
+
+        case 'mac':
+            $ctl = new ProductsController();
+            $ctl->index();
             break;
 
         default:
