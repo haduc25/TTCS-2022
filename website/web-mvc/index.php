@@ -20,9 +20,16 @@
             $ctl->index();
             break;
 
+        // Admin
         case 'admin':
             $ctl = new AdminController();
             $ctl->index();
+            // echo "hello guys !";
+            break;
+
+        case 'admin/login':
+            $ctl = new AdminController();
+            $ctl->login();
             // echo "hello guys !";
             break;
 

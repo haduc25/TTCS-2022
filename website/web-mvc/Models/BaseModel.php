@@ -41,7 +41,24 @@ class BaseModel
         $stmt->execute();
         $rs = $stmt->fetchAll(PDO::FETCH_CLASS, get_class($model));
         return $rs;
+
     }
+
+
+    //check login sql
+    public static function login_admin($email, $password, $permission)
+    {
+        $model = new static();
+        $sql = "select * from $model->tName where email = '$email' and password = '$password' and permission = '$permission'";
+        // var_dump($sql); exit;
+        $stmt = $model->conn->prepare($sql);
+        $stmt->execute();
+        $rs = $stmt->fetchAll(PDO::FETCH_CLASS, get_class($model));
+        // var_dump($rs); exit;
+        return $rs;
+
+    }
+
 
 
     //insert
