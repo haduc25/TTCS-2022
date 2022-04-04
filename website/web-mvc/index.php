@@ -4,6 +4,7 @@
 
     require_once './Controllers/HomeController.php';
     require_once './Controllers/ProductsController.php';
+    require_once './Controllers/AdminLogin.php';
 
 
     switch($url)
@@ -17,6 +18,12 @@
         case 'mac':
             $ctl = new ProductsController();
             $ctl->index();
+            break;
+
+        case 'admin':
+            $ctl = new AdminController();
+            $ctl->index();
+            // echo "hello guys !";
             break;
 
         default:
