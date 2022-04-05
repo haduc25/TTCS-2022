@@ -34,7 +34,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img src="{{ asset('/image/avatar.png') }}"
                             class="user-image" alt="User Image">
-                        <span class="hidden-xs">user1</span>
+                        <span class="hidden-xs"><?=$checker[0]->ho_ten;?></span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
@@ -43,7 +43,7 @@
                                 class="img-circle" alt="User Image">
 
                             <p>
-                                user1
+                                <?=$checker[0]->ho_ten;?>
                                 <small>( Quản trị viên )</small>
                             </p>
                         </li>
@@ -75,7 +75,8 @@
                     class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-                <p>user1  <?php var_dump($checker[0]->ho_ten); ?></p>
+                <!-- <p><?=$checker[0]->ho_ten;?>  <?php /*var_dump($checker[0]->ho_ten);*/ ?></p> -->
+                <p><?=$checker[0]->ho_ten;?></p>
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
         </div>
@@ -169,7 +170,7 @@
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Admin</a></li>
-            <li class="active">{{ $GetSetting->namepage }}</li>
+            <li class="active">Dashboard</li>
         </ol>
     </section>
 
