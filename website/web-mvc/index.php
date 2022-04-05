@@ -33,6 +33,12 @@
             // echo "hello guys !";
             break;
 
+        case 'admin/home':
+            $ctl = new AdminController();
+            $ctl->home();
+            // echo "hello guys !";
+            break;
+
         default:
             echo "error 404 ! Page not found... :<";
     }

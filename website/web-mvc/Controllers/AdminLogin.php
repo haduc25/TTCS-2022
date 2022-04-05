@@ -1,6 +1,7 @@
 <?php 
 // require_once './Models/Products.php';
 require_once './Models/Admin.php';
+session_start();
 
 
 class AdminController
@@ -17,15 +18,17 @@ class AdminController
 
     public function login()
     {
+
         $_email = $_POST['email'];
         $_pwd = $_POST['password'];
      
         // var_dump($_email); exit;
     
         $admin = new Admin();
+        // var_dump($admin); exit;
         //login_admin(email, pwd, permission)
-        $check = $admin->login_admin($_email, $_pwd, 1);
-        if(!$check || $check == NULL)
+        $checker = $admin->login_admin($_email, $_pwd, 1);
+        if(!$checker || $checker == NULL)
         {
             ?>
             <script language="javascript">alert("Email đăng nhập hoặc mật khẩu của bạn không chính xác, vui lòng thử lại !");
@@ -35,8 +38,14 @@ class AdminController
         }
         else
         {
-            echo "sign done!";
             //luu vao _SESSION
+            $_SESSION['test'] = '123';
+
+
+            // $_SESSION['admin-login'] = $checker;
+            // var_dump($_SESSION['admin-login']); exit;
+            // header("Location: ../admin");
+            header("Location: ./home");
         }
 
         ?>
@@ -52,6 +61,13 @@ class AdminController
         
         // require_once 'Views/admin/admin_login.php';
     }
+
+
+    public function home()
+    {
+        require_once 'Views/admin/admin_home.php';
+    }
+
 
 }
 
