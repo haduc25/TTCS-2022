@@ -55,6 +55,8 @@ class AdminController
             // var_dump($_SESSION['admin_login']); exit;
             // header("Location: ../admin");
             header("Location: ./home");
+            // require_once 'Views/admin/index.php';
+
         }
 
         ?>
@@ -75,6 +77,7 @@ class AdminController
     public function home()
     {
         require_once 'Views/admin/admin_home.php';
+        // require_once 'Views/admin/index.php';
     }
 
 

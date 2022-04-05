@@ -34,7 +34,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img src="{{ asset('/image/avatar.png') }}"
                             class="user-image" alt="User Image">
-                        <span class="hidden-xs">{{ Auth::user()->name }}</span>
+                        <span class="hidden-xs">user1</span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
@@ -43,7 +43,7 @@
                                 class="img-circle" alt="User Image">
 
                             <p>
-                                {{ Auth::user()->name }}
+                                user1
                                 <small>( Quản trị viên )</small>
                             </p>
                         </li>
@@ -75,7 +75,7 @@
                     class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-                <p>{{ Auth::user()->name }}</p>
+                <p>user1  <?php var_dump($_SESSION['admin_login']) ?></p>
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
         </div>
@@ -164,7 +164,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            {{ $GetSetting->namepage }}
+            Dashboard 
             <small>Version 2.0</small>
         </h1>
         <ol class="breadcrumb">
