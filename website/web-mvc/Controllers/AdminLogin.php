@@ -54,7 +54,10 @@ class AdminController
             $_SESSION['admin_login'] = $checker[0]->email;
             // var_dump($_SESSION['admin_login']); exit;
             // header("Location: ../admin");
-            header("Location: ./home");
+            // header("Location: ./home");
+
+
+            require_once 'Views/admin/admin_home.php';
             // require_once 'Views/admin/index.php';
 
         }

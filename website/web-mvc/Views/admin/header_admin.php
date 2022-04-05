@@ -75,7 +75,7 @@
                     class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-                <p>user1  <?php var_dump($_SESSION['admin_login']) ?></p>
+                <p>user1  <?php var_dump($checker[0]->ho_ten); ?></p>
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
         </div>

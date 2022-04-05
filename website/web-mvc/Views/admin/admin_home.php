@@ -29,7 +29,7 @@
     <?php
     include './Views/admin/header_admin.php';
     include './Views/admin/admin_home2.php';
-
+    //  var_dump($checker); exit;
     ?>
 </div>
 <!--/Footer-->
