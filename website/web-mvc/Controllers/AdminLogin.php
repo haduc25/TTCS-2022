@@ -51,8 +51,8 @@ class AdminController
             // echo "</pre>";
 
 
-            $_SESSION['admin_login1'] = $checker[0]->email;
-            // var_dump($_SESSION['admin_login1']); exit;
+            $_SESSION['admin_login'] = $checker[0]->email;
+            // var_dump($_SESSION['admin_login']); exit;
             // header("Location: ../admin");
             header("Location: ./home");
         }
