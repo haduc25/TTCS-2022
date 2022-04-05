@@ -14,23 +14,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
-<?php 
-  // session_start();
-  // $_SESSION['test'] = 'halo 123';
-
-  if (!empty($_SESSION['test']))
-  {
-      echo "working ! " . $_SESSION['test'];
-  } else
-  {
-
-      echo "not work! " . $_SESSION['test'];
-  }
-
-  // var_dump($admin); exit;
-
-?>
-
+  
 <div id="main" class="wrapper">
     <div class="login-box">
       <div class="login-logo">

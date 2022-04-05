@@ -8,29 +8,14 @@
 </head>
 <body>
     <?php
-        // session_start();
-
-        // $_SESSION['ad'] = 123;
-
-        // if (!empty($_SESSION['ad']))
-        // {
-        //     echo "working ! " . $_SESSION['ad'];
-        // } else
-        // {
-
-        //     echo "not work! " . $_SESSION['ad'];
-        // }
-
-        if (!empty($_SESSION['test']))
+        if (!empty($_SESSION['admin_login1']))
         {
-            echo "working ! " . $_SESSION['test'];
+            echo "working ! " . $_SESSION['admin_login1'];
         } else
         {
 
-            echo "not work! " . $_SESSION['test'];
+            echo "not work! " . $_SESSION['admin_login1'];
         }
-
-
     ?>
 </body>
 </html>

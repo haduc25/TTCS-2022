@@ -39,11 +39,20 @@ class AdminController
         else
         {
             //luu vao _SESSION
-            $_SESSION['test'] = '123';
+            // echo "number 1 <br> <pre>";
+            // var_dump($checker);
+            // echo "</pre>";
+
+            // echo "<br>";
+
+            // echo "number 2 <br> <pre>";
+            // var_dump($checker[0]->ho_ten); exit;
+            // var_dump($checker[0]); exit;
+            // echo "</pre>";
 
 
-            // $_SESSION['admin-login'] = $checker;
-            // var_dump($_SESSION['admin-login']); exit;
+            $_SESSION['admin_login1'] = $checker[0]->email;
+            // var_dump($_SESSION['admin_login1']); exit;
             // header("Location: ../admin");
             header("Location: ./home");
         }
