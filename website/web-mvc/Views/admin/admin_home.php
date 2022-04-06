@@ -28,8 +28,55 @@
 <div id="main" class="wrapper">
     <?php
     include './Views/admin/header_admin.php';
-    include './Views/admin/admin_home2.php';
-    //  var_dump($checker); exit;
+    // include './Views/admin/admin_home2.php';
+    
+    // if(!empty($_home) && isset($_home))
+    // {
+    //     include './Views/admin/admin_home2.php';
+    // }else
+    // {
+    //     include './Views/admin/doimatkhau.blade.php';
+
+    // }
+    
+    // if($_home == "pwd")
+    // {
+    //     include './Views/admin/admin_home2.php';
+    // }else
+    // {
+    //     include './Views/admin/doimatkhau.blade.php';
+
+    // }
+
+    if(!empty($this->_index_pages) && isset($this->_index_pages))
+    {
+        switch($this->_index_pages)
+        {
+            case 'home':
+                include './Views/admin/admin_home2.php';
+                break;
+            
+            case 'changePassword':
+                include './Views/admin/doimatkhau.blade.php';
+                break;
+
+            default:
+                echo "some error there!";
+                break;
+
+        }
+        
+    }else
+    {
+        echo "loi o day ne!";
+    }
+   
+
+
+
+    // var_dump($checker); exit;
+
+
     ?>
 </div>
 <!--/Footer-->

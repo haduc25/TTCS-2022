@@ -45,6 +45,36 @@
             $ctl->logout();
             break;
 
+
+
+
+
+
+
+        //doi mat khau
+        case 'admin/login/change_password':
+            $ctl = new AdminController();
+            // echo "wanna change password";
+            $ctl->changePassword();
+            break;
+
+        //doi mat khau2
+        case 'admin/settings':
+            // echo "doi pwd 2";
+            $ctl = new AdminController();
+            // // echo "wanna change password";
+            $ctl->changePassword2();
+            break;
+
+
+
+
+
+
+
+
+
+
         default:
             echo "error 404 ! Page not found... :<";
     }

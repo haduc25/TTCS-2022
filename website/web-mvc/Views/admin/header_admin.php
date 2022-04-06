@@ -143,10 +143,12 @@
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
+
                 <ul class="treeview-menu">
                     <li><a href="{{ route('admin_setting') }}"><i class="fa fa-circle-o"></i> Cài đặt website</a></li>
-                    <li><a href="{{ route('admin_doi_mat_khau') }}"><i class="fa fa-circle-o"></i> Đổi mật khẩu</a></li>
-                    <li><a href="{{ route('admin_update') }}"><i class="fa fa-circle-o"></i> Cập nhật phiên bản mới</a></li>
+                    <!-- <li><a href="login/change_password"><i class="fa fa-circle-o"></i> Đổi mật khẩu</a></li> -->
+                    <li><a href="settings?doimatkhau=true"><i class="fa fa-circle-o"></i> Đổi mật khẩu</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> Cập nhật phiên bản mới</a></li>
                 </ul>
             </li>
 

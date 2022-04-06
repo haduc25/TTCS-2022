@@ -6,6 +6,8 @@ session_start();
 
 class AdminController
 {
+    public $_index_pages = "index";
+
     public function index()
     {
         //$prds: products
@@ -21,6 +23,7 @@ class AdminController
 
         $_email = $_POST['email'];
         $_pwd = $_POST['password'];
+        // var_dump($this->_index_pages); exit;
      
         // var_dump($_email); exit;
     
@@ -56,7 +59,7 @@ class AdminController
             // header("Location: ../admin");
             // header("Location: ./home");
 
-
+            $this->_index_pages = "home";
             require_once 'Views/admin/admin_home.php';
             // require_once 'Views/admin/index.php';
 
@@ -94,6 +97,70 @@ class AdminController
         <?php
     }
 
+
+    //change_password
+    public function changePassword()
+    {
+        
+        // $_email = $_POST['email'];
+        // $_pwd = $_POST['password'];
+        // $_home = "home";
+     
+        // // var_dump($_email); exit;
+    
+        // $admin = new Admin();
+        // // var_dump($admin); exit;
+        // //login_admin(email, pwd, permission)
+        // $checker = $admin->login_admin($_email, $_pwd, 1);
+        // var_dump($checker); exit;
+        // if(!$checker || $checker == NULL)
+        // {
+        //     ?>
+        <!-- //     <script language="javascript">alert("Email đăng nhập hoặc mật khẩu của bạn không chính xác, vui lòng thử lại !");
+        //     window.location = '../admin';
+        //     </script> -->
+        //     <?php
+        // }
+        // else
+        // {
+        //     //luu vao _SESSION
+        //     // echo "number 1 <br> <pre>";
+        //     // var_dump($checker);
+        //     // echo "</pre>";
+
+        //     // echo "<br>";
+
+        //     // echo "number 2 <br> <pre>";
+        //     // var_dump($checker[0]->ho_ten); exit;
+        //     // var_dump($checker[0]); exit;
+        //     // echo "</pre>";
+
+
+        //     $_SESSION['admin_login'] = $checker[0]->email;
+        //     // var_dump($_SESSION['admin_login']); exit;
+        //     // header("Location: ../admin");
+        //     // header("Location: ./home");
+
+
+        //     require_once 'Views/admin/admin_home.php';
+        //     // require_once 'Views/admin/index.php';
+        // }
+
+
+    }
+
+    
+    //change_password2
+    public function changePassword2()
+    {
+        if (isset($_GET['doimatkhau'])) {
+            $this->_index_pages = "changePassword";
+            // echo "done!";
+            // header("Location: ../admin");
+            require_once 'Views/admin/admin_home.php';
+
+        }
+    }
 
 }
 
