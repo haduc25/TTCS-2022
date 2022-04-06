@@ -38,6 +38,13 @@
             $ctl->home();
             break;
 
+        //logout
+        case 'admin/logout':
+            $ctl = new AdminController();
+            // echo "wanna log out";
+            $ctl->logout();
+            break;
+
         default:
             echo "error 404 ! Page not found... :<";
     }

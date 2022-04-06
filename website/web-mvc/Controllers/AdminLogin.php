@@ -83,6 +83,17 @@ class AdminController
         // require_once 'Views/admin/index.php';
     }
 
+    //log out
+    public function logout()
+    {
+        unset($_SESSION['admin_login']);
+        ?>
+        <script language="javascript">alert("Đã đăng xuất tài khoản thành công !");
+        window.location = '../admin';
+        </script>
+        <?php
+    }
+
 
 }
 
