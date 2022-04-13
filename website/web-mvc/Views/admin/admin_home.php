@@ -30,6 +30,19 @@
             border-color: #32383e;
         }
 
+        .tb-col1
+        {
+            text-align: center;
+        }
+
+        .tb-col1:hover
+        {
+            background-color: white;
+            color: #212529;
+        }
+
+
+
     </style>
     
 </head>
