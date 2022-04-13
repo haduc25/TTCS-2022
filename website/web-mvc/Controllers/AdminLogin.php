@@ -23,6 +23,7 @@ class AdminController
 
         $_email = $_POST['email'];
         $_pwd = $_POST['password'];
+        $_well = "haha123";
         // var_dump($this->_index_pages); exit;
      
         // var_dump($_email); exit;
@@ -60,6 +61,11 @@ class AdminController
             // header("Location: ./home");
 
             $this->_index_pages = "home";
+
+            //
+            $products_1 = $admin->getAllAdmin();
+            // var_dump($admin->getAllAdmin()); exit;
+
             require_once 'Views/admin/admin_home.php';
             // require_once 'Views/admin/index.php';
 

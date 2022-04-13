@@ -44,6 +44,17 @@ class BaseModel
 
     }
 
+    //select all admin
+    public static function getAllAdmin()
+    {
+        $model = new static();
+        $sql = "select * from `products_detail`, `products` where products_detail.id_sp = products.id_sp";
+        $stmt = $model->conn->prepare($sql);
+        $stmt->execute();
+        $rs = $stmt->fetchAll(PDO::FETCH_CLASS, get_class($model));
+        return $rs;
+    }
+
 
     //check login sql
     public static function login_admin($email, $password, $permission)
