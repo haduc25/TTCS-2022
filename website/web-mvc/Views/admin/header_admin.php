@@ -94,7 +94,6 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MAIN NAVIGATION</li>
-            <li><a href="{{ route('admin_home') }}"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a></li>
 
             
             <li class="treeview">
@@ -161,12 +160,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Dashboard 
+            Quản lý sản phẩm 
             <small>Version 2.0</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Admin</a></li>
-            <li class="active">Dashboard</li>
+            <li class="active">Quản lý sản phẩm</li>
         </ol>
     </section>
 
