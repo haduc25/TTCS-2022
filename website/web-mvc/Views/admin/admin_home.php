@@ -46,6 +46,20 @@
             border-bottom: 2px solid #212529;
         }
 
+        .btn-admin
+        {
+            border-radius: 5px;
+            background-color: #ccc; 
+            padding: 6px 22px;
+            margin-top: 20px;
+        }
+
+        .btn-admin:hover
+        {
+            border: 1px solid #000;
+            opacity: .8;
+        }
+
     </style>
     
 </head>

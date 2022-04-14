@@ -48,7 +48,7 @@
             height: 28px;
         }
 
-        .form-control
+        .form-control1
         {
             width: 60%; 
             margin-left: 20px;
@@ -72,7 +72,7 @@
 <body class="hold-transition skin-blue sidebar-mini">
 <div id="main" class="wrapper">
     <?php
-    include './Views/admin/header_admin.php';
+    include './Views/admin/header_admin-add.php';
     include './Views/admin/admin_body_add.php'; 
 
 
