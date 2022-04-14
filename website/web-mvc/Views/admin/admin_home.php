@@ -50,8 +50,9 @@
         {
             border-radius: 5px;
             background-color: #ccc; 
-            padding: 6px 22px;
+            /* padding: 6px 22px; */
             margin-top: 20px;
+            font-size: 14px;
         }
 
         .btn-admin:hover
@@ -60,6 +61,52 @@
             opacity: .8;
         }
 
+        .mgl-28
+        {
+            margin-left: 28px;
+        }
+
+        .mgb-24
+        {
+            margin-bottom: 24px;
+        }
+
+        .mgt-50
+        {
+            margin-top: 50px;
+        }
+
+        .pl-15
+        {
+            padding-left: 15px;
+        }
+
+        
+        .span-txt
+        {
+            font-size: 16px;
+            font-weight: bold;
+
+        }
+
+        .btn-them-sp
+        {
+            float: right;
+            margin: 14px;
+            padding: 8px 0;
+            background-color: #212529;
+            border-radius: 8px;
+        }
+
+        .btn-them-sp:hover
+        {
+            opacity: .8;
+        }
+
+        .btn-them-sp > a
+        {
+            color: #fff;
+        }
     </style>
     
 </head>
