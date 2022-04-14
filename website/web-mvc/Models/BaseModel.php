@@ -36,7 +36,7 @@ class BaseModel
     public static function get3items()
     {
         $model = new static();
-        $sql = "select * from `products_detail`, `products` where products_detail.id_sp = products.id_sp";
+        $sql = "select * from `products_detail`, `products` where products_detail.id_sp = products.id_sp limit 3";
         $stmt = $model->conn->prepare($sql);
         $stmt->execute();
         $rs = $stmt->fetchAll(PDO::FETCH_CLASS, get_class($model));

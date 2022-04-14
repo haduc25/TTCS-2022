@@ -21,7 +21,24 @@ class AdminController
 
     public function login()
     {
+        $admin = new Admin();
 
+        $products_1 = $admin->getAllAdmin(1);
+        $products_2 = $admin->getAllAdmin(2);
+
+        $this->_index_pages = "home";
+
+        $this->_name_h1_1 = "Quản lý sản phẩm";
+        
+
+
+
+        if(!empty($_SESSION['admin_login']) && isset($_SESSION['admin_login']))
+        {
+            require_once 'Views/admin/admin_home.php';
+        }else
+        {
+            
         $_email = $_POST['email'];
         $_pwd = $_POST['password'];
         $_well = "haha123";
@@ -29,7 +46,7 @@ class AdminController
      
         // var_dump($_email); exit;
     
-        $admin = new Admin();
+        // $admin = new Admin();
         // var_dump($admin); exit;
         //login_admin(email, pwd, permission)
         $checker = $admin->login_admin($_email, $_pwd, 1);
@@ -61,14 +78,13 @@ class AdminController
             // header("Location: ../admin");
             // header("Location: ./home");
 
-            $this->_index_pages = "home";
 
             //
-            $products_1 = $admin->getAllAdmin(1);
-            $products_2 = $admin->getAllAdmin(2);
+            // $products_1 = $admin->getAllAdmin(1);
+            // $products_2 = $admin->getAllAdmin(2);
 
             //
-             $this->_name_h1_1 = "Quản lý sản phẩm";
+            //  $this->_name_h1_1 = "Quản lý sản phẩm";
 
             // var_dump($admin->getAllAdmin()); exit;
 
@@ -89,6 +105,9 @@ class AdminController
 
         
         // require_once 'Views/admin/admin_login.php';
+            
+        }
+
     }
 
 

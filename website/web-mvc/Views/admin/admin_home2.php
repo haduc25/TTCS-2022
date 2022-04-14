@@ -8,7 +8,7 @@
                     <th scope="col">Nội dung sản phẩm</th>
                     <th scope="col">Ảnh sản phẩm</th>
                     <th scope="col">Số lượng</th>
-                    <th scope="col" colspan="2" class="tb-col1"><a href="login/add">Thêm</a></th>
+                    <th scope="col" colspan="2" class="tb-col1"><a href="login/add" style="padding: 10px 12px;">Thêm</a></th>
 
                 </tr>
             </thead>
@@ -19,12 +19,12 @@
                     
                     // var_dump($products); exit();
                     ?>
-                        <tr>
+                        <tr class="table-border">
                             <th scope="row" style="padding-left: 15px;"><?=$stt ?></th>
                             <?php /*var_dump($products_1[0]->id_sp); exit;*/ ?>
                             <td><?=$prd_1->ten_sp ?></td>
                             <td><?=$prd_1->sub_ten_sp ?></td>
-                            <td><img src="<?= $prd_1->img_sp ?>" alt="<?=$prd_1->ten_sp ?>"></td>
+                            <td><img src="../<?= $prd_1->img_sp ?>" alt="<?=$prd_1->ten_sp ?>" width="150"></td>
                             <td><?=$prd_1->sl_sp ?></td>
                             <td><a href="#">Sửa</a></td>
                             <td><a href="#">Xóa</a></td>

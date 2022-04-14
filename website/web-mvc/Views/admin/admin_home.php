@@ -41,8 +41,10 @@
             color: #212529;
         }
 
-
-
+        .table-border
+        {
+            border-bottom: 2px solid #212529;
+        }
 
     </style>
     

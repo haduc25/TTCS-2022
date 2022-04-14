@@ -17,7 +17,7 @@
                         <span class="btn-save">Save</span>
                 </button>
 
-                <a  href="../" class="mgl-28">Hủy bỏ</a>
+                <a  href="../login" class="mgl-28">Hủy bỏ</a>
             </div>
 
 

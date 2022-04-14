@@ -108,7 +108,7 @@
                   <section class="section1">
                     <div
                       class="background"
-                      style="background-image: url(./public/img/mac/hero_macbook_pro_large.jpg)"
+                      style="background-image: url(./<?= $prd1item[0]->img_sp ?>)"
                     ></div>
 
                     <div class="top__title">
@@ -147,7 +147,7 @@
                         { ?>
 
                           <div class="note-book-details">
-                            <img src="./public/svg/mac/mac_air.png" alt="mac os" />
+                            <img src="./<?= $prd3->img_sp ?>" alt="<?= $prd3->ten_sp ?>" />
                             <div class="color-icon">
                                 <img src="./public/svg/mac/icon_color_2.png" alt="color" />
                             </div>
