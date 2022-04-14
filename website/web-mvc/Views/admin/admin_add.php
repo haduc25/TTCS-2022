@@ -33,10 +33,33 @@
             margin-top: 16px;
         }
 
+        .mgt-32
+        {
+            margin-top: 32px;
+        }
+
+        .w-20-percent
+        {
+           width: 20%;
+        }
+
         .form-control
         {
             width: 60%; 
             margin-left: 20px;
+        }
+
+        .btn-submit
+        {
+            width: 25%;
+            padding: 5px;
+            margin-left: 20px;
+            background-color: lightblue;
+        }
+
+        .btn-submit:hover
+        {
+            opacity: .8;
         }
     </style>
     

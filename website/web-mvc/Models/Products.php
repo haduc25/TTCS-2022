@@ -8,7 +8,7 @@ class Products extends BaseModel
     public $tName = 'products'; 
 
     //columns
-    public $col = ['id_sp, id_dm, ten_sp, sub_ten_sp, img_sp, sl_sp'];
+    public $columns = ['id_dm', 'ten_sp', 'sub_ten_sp', 'img_sp', 'sl_sp'];
 }
 
 

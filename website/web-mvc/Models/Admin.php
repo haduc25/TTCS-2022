@@ -8,7 +8,7 @@ class Admin extends BaseModel
     public $tName = 'admin'; 
 
     //columns
-    public $col = ['ho_ten, email, password, permission'];
+    public $col = ['ho_ten', 'email', 'password', 'permission'];
 }
 
 

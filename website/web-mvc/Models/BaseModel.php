@@ -72,9 +72,11 @@ class BaseModel
 
 
 
-    //insert
+	//insert
     public function insert(){
-        $this->queryBuilder = "insert into $this->tableName (";
+        // var_dump($this->tableName); exit();
+        $this->queryBuilder = "insert into $this->tName (";
+        // var_dump($this->tName); exit;
         foreach ($this->columns as $col) {
             if($this->{$col} == null){
                 continue;
@@ -92,6 +94,7 @@ class BaseModel
         $this->queryBuilder = rtrim($this->queryBuilder, ", ");
         $this->queryBuilder .= ")";
 
+        // var_dump($this->queryBuilder); exit;
         $stmt = $this->conn->prepare($this->queryBuilder);
         try{
 
@@ -102,6 +105,7 @@ class BaseModel
             var_dump($ex->getMessage());die;
         }
     }
+
     //edit
     function update(){
         $this->queryBuilder = "update $this->tableName set ";

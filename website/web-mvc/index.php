@@ -52,6 +52,13 @@
             $ctl->create_pages_insert();
             break;
 
+        //admin/insert-prod
+        case 'admin/login/insert-prod':
+            $ctl = new AdminController();
+            // echo "click to insert-prod";
+            $ctl->admin_insert();
+            break;
+
 
 
 

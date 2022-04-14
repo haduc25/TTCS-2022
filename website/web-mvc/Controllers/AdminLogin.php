@@ -1,5 +1,5 @@
 <?php 
-// require_once './Models/Products.php';
+require_once './Models/Products.php';
 require_once './Models/Admin.php';
 session_start();
 
@@ -114,6 +114,7 @@ class AdminController
     public function changePassword()
     {
         
+        
         // $_email = $_POST['email'];
         // $_pwd = $_POST['password'];
         // $_home = "home";
@@ -167,6 +168,59 @@ class AdminController
     {
         $this->_name_h1_1 = "Thêm sản phẩm (MACBOOK)";
         require_once "Views/admin/admin_add.php";
+    }
+
+    //admin -> insert-prod
+    public function admin_insert()
+    {
+		// echo "clicked to insert-prod";
+        // var_dump($_POST['tensp']); exit;
+
+		$_tensp = $_POST['tensp'];
+		$_sub_tensp = $_POST['sub_tensp'];
+		$_slsp = $_POST['slsp'];
+		$_imgsp = $_FILES['imgsp'];
+
+		$fileName = $_imgsp['name']; //set name 
+        // $admin = new Admin();
+        $products = new Products();
+
+        $products->id_dm = "1";
+
+        $products->ten_sp = $_tensp;
+        $products->sub_ten_sp = $_sub_tensp;
+        $products->sl_sp = $_slsp;
+
+        // var_dump($products->id_dm); exit;
+
+
+
+		$fileName = null;
+		if($_imgsp['size'] > 0)
+		{
+			$fileName = 'upload/'.time()."-".$_imgsp['name'];
+		}
+
+		if(move_uploaded_file($_imgsp['tmp_name'], $fileName))
+		{
+			//have image
+			// $sql.=" ,avatar=:avatar";
+		}else
+		{
+			//no image
+			$fileName = null;
+		}
+
+        $products->img_sp = $fileName;
+        $products->insert();
+
+        // $products->insert();
+        echo "done!";
+
+		// //exit();
+		// $users->avatar = $fileName;
+		// $users->insert();
+		// header("Location: ../index.php");
     }
 
     
