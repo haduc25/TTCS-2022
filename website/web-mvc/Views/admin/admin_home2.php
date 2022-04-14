@@ -24,7 +24,7 @@
                             <?php /*var_dump($products_1[0]->id_sp); exit;*/ ?>
                             <td><?=$prd_1->ten_sp ?></td>
                             <td><?=$prd_1->sub_ten_sp ?></td>
-                            <td><?=$prd_1->img_sp ?></td>
+                            <td><img src="<?= $prd_1->img_sp ?>" alt="<?=$prd_1->ten_sp ?>"></td>
                             <td><?=$prd_1->sl_sp ?></td>
                             <td><a href="#">Sửa</a></td>
                             <td><a href="#">Xóa</a></td>
@@ -63,7 +63,7 @@
                             <?php /*var_dump($products_1[0]->id_sp); exit;*/ ?>
                             <td><?=$prd_2->ten_sp ?></td>
                             <td><?=$prd_2->sub_ten_sp ?></td>
-                            <td><?=$prd_2->img_sp ?></td>
+                            <td><img src="../<?=$prd_2->img_sp ?>" alt="<?=$prd_2->ten_sp ?>" width="180"></td>
                             <td><?=$prd_2->sl_sp ?></td>
                             <td><a href="#">Sửa</a></td>
                             <td><a href="#">Xóa</a></td>
