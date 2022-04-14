@@ -45,6 +45,13 @@
             $ctl->logout();
             break;
 
+        //admin/add
+        case 'admin/login/add':
+            $ctl = new AdminController();
+            // echo "click to add";
+            $ctl->create_pages_insert();
+            break;
+
 
 
 

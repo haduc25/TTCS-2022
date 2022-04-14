@@ -7,6 +7,7 @@ session_start();
 class AdminController
 {
     public $_index_pages = "index";
+    public $_name_h1_1 = "empty";
 
     public function index()
     {
@@ -63,7 +64,12 @@ class AdminController
             $this->_index_pages = "home";
 
             //
-            $products_1 = $admin->getAllAdmin();
+            $products_1 = $admin->getAllAdmin(1);
+            $products_2 = $admin->getAllAdmin(2);
+
+            //
+             $this->_name_h1_1 = "Quản lý sản phẩm";
+
             // var_dump($admin->getAllAdmin()); exit;
 
             require_once 'Views/admin/admin_home.php';
@@ -153,6 +159,14 @@ class AdminController
         // }
 
 
+    }
+
+
+    //admin -> add -> products -> mac
+    public function create_pages_insert()
+    {
+        $this->_name_h1_1 = "Thêm sản phẩm (MACBOOK)";
+        require_once "Views/admin/admin_add.php";
     }
 
     

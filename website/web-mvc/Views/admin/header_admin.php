@@ -34,7 +34,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img src="../public/img/avatar.jpg"
                             class="user-image" alt="User Image">
-                        <span class="hidden-xs"><?=$checker[0]->ho_ten;?></span>
+                        <span class="hidden-xs"><?php /* $checker[0]->ho_ten; */ ?></span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
@@ -43,7 +43,7 @@
                                 class="img-circle" alt="User Image">
 
                             <p>
-                                <?=$checker[0]->ho_ten;?>
+                                <?php/*$checker[0]->ho_ten; */?>
                                 <small>( Quản trị viên )</small>
                             </p>
                         </li>
@@ -74,8 +74,8 @@
                 <img src="../public/img/avatar.jpg" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-                <!-- <p><?=$checker[0]->ho_ten;?>  <?php /*var_dump($checker[0]->ho_ten);*/ ?></p> -->
-                <p><?=$checker[0]->ho_ten;?></p>
+                <!-- <p><?php/*$checker[0]->ho_ten; */?>  <?php /*var_dump($checker[0]->ho_ten);*/ ?></p> -->
+                <p><?php /*$checker[0]->ho_ten;*/?></p>
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
         </div>
@@ -160,7 +160,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Quản lý sản phẩm 
+            <?= $this->_name_h1_1 ?>
             <small>Version 2.0</small>
         </h1>
         <ol class="breadcrumb">

@@ -45,10 +45,10 @@ class BaseModel
     }
 
     //select all admin voi category = macbook
-    public static function getAllAdmin()
+    public static function getAllAdmin($category)
     {
         $model = new static();
-        $sql = "select * from `products_detail`, `products` where products_detail.id_sp = products.id_sp and products.id_dm = 1";
+        $sql = "select * from `products_detail`, `products` where products_detail.id_sp = products.id_sp and products.id_dm = $category";
         $stmt = $model->conn->prepare($sql);
         $stmt->execute();
         $rs = $stmt->fetchAll(PDO::FETCH_CLASS, get_class($model));
