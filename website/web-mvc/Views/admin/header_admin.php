@@ -34,7 +34,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img src="../public/img/avatar.jpg"
                             class="user-image" alt="User Image">
-                        <span class="hidden-xs"><?php /* $checker[0]->ho_ten; */ ?></span>
+                        <span class="hidden-xs"><?= $_SESSION['admin_name'] ?></span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
@@ -43,7 +43,7 @@
                                 class="img-circle" alt="User Image">
 
                             <p>
-                                <?php/*$checker[0]->ho_ten; */?>
+                                <?= $_SESSION['admin_name'] ?>
                                 <small>( Quản trị viên )</small>
                             </p>
                         </li>

@@ -8,6 +8,7 @@ class AdminController
 {
     public $_index_pages = "index";
     public $_name_h1_1 = "empty";
+    // public $_admin_name = "empty";
 
     public function index()
     {
@@ -23,6 +24,7 @@ class AdminController
     {
         $admin = new Admin();
 
+        /**doan nay phai sua lai lay tu bang products*/
         $products_1 = $admin->getAllAdmin(1);
         $products_2 = $admin->getAllAdmin(2);
 
@@ -74,6 +76,7 @@ class AdminController
 
 
             $_SESSION['admin_login'] = $checker[0]->email;
+            $_SESSION['admin_name'] = $checker[0]->ho_ten;
             // var_dump($_SESSION['admin_login']); exit;
             // header("Location: ../admin");
             // header("Location: ./home");
@@ -185,7 +188,8 @@ class AdminController
     //admin -> add -> products -> mac
     public function create_pages_insert()
     {
-        $this->_name_h1_1 = "Thêm sản phẩm (MACBOOK)";
+        $this->_name_h1_1 = "Thêm sản phẩm";
+        // $this->_admin_name = "adm1";
         require_once "Views/admin/admin_add.php";
     }
 
@@ -194,6 +198,44 @@ class AdminController
     {
 		// echo "clicked to insert-prod";
         // var_dump($_POST['tensp']); exit;
+        // var_dump($_POST['id_dm']); exit;
+
+        /*danh muc*/
+        $check_id_dm = $_POST['id_dm'];
+
+        switch($check_id_dm)
+        {
+            case 'macbook':
+                $_id_dm = 1;
+                break;
+            
+            case 'ipad':
+                $_id_dm = 2;
+                break;
+            
+            case 'iphone':
+                $_id_dm = 3;
+                break;
+            
+            case 'aWatch':
+                $_id_dm = 4;
+                break;
+            
+            case 'aTV':
+                $_id_dm = 5;
+                break;
+            
+            case 'aMusic':
+                $_id_dm = 6;
+                break;
+            default:
+                echo "Lỗi danh mục k hợp lệ! vui lòng thử lại.";
+                break;
+        }
+
+        /**/
+        
+
 
 		$_tensp = $_POST['tensp'];
 		$_sub_tensp = $_POST['sub_tensp'];
@@ -204,13 +246,21 @@ class AdminController
         // $admin = new Admin();
         $products = new Products();
 
-        $products->id_dm = "1";
+        if(!empty($_id_dm) && isset($_id_dm))
+        {
+            $products->id_dm = $_id_dm;
+        }
+
+        // $products->id_dm = "1";
 
         $products->ten_sp = $_tensp;
         $products->sub_ten_sp = $_sub_tensp;
         $products->sl_sp = $_slsp;
 
         // var_dump($products->id_dm); exit;
+
+
+
 
 
 
@@ -231,10 +281,19 @@ class AdminController
 		}
 
         $products->img_sp = $fileName;
+        
         $products->insert();
 
+        ?>
+            <script language="javascript">alert("Đã thêm thành công!");
+            window.location = '../login';
+            </script>
+        <?php
+
+        // header("Location: ../login");
+
         // $products->insert();
-        echo "done!";
+        // echo "done!";
 
 		// //exit();
 		// $users->avatar = $fileName;

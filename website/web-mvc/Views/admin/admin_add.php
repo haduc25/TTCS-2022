@@ -43,6 +43,11 @@
            width: 20%;
         }
 
+        .h-28
+        {
+            height: 28px;
+        }
+
         .form-control
         {
             width: 60%; 
