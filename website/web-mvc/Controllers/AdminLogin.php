@@ -383,6 +383,69 @@ class AdminController
         {
             $prd = new Products();
 
+            // $check_id_dm = $_POST['id_dm'];
+            // var_dump($_POST['id_dm']); exit;
+            
+            
+            /*danh muc*/
+            $check_id_dm = $_POST['id_dm'];
+
+            switch($check_id_dm)
+            {
+                case 'macbook':
+                    $_id_dm = 1;
+                    break;
+                
+                case 'ipad':
+                    $_id_dm = 2;
+                    break;
+                
+                case 'iphone':
+                    $_id_dm = 3;
+                    break;
+                
+                case 'aWatch':
+                    $_id_dm = 4;
+                    break;
+                
+                case 'aTV':
+                    $_id_dm = 5;
+                    break;
+                
+                case 'aMusic':
+                    $_id_dm = 6;
+                    break;
+                    
+                case "Macbook":
+                    $_id_dm = 1;
+                    break;
+                
+                case "iPad":
+                    $_id_dm = 2;
+                    break;
+                
+                case "iPhone":
+                    $_id_dm = 3;
+                    break;
+                
+                case "Apple Watch":
+                    $_id_dm = 4;
+                    break;
+                
+                case "Apple TV":
+                    $_id_dm = 5;
+                    break;
+                
+                case "Apple Music":
+                    $_id_dm = 6;
+                    break;
+                default:
+                    echo "Lỗi danh mục k hợp lệ! vui lòng thử lại.";
+                    break;
+            }
+
+            /**/
+
             $_tensp = $_POST['tensp'];
             $_sub_tensp = $_POST['sub_tensp'];
             $_slsp = $_POST['slsp'];
@@ -392,44 +455,38 @@ class AdminController
 
             // var_dump($_SESSION['img']); exit;
             // var_dump($_imgsp); exit;
-    
 
-
-            //neu co img va k co anh update
-            if(!empty($_SESSION['img']) && isset($_SESSION['img']) && $_imgsp['size'] > 0)
+            //update
+            if($_imgsp['size'] > 0)
             {
-                //giu nguyen img k update
-                
+                //neu co img update
+                // echo "have img";
+                $fileName = 'upload/'.time()."-".$_imgsp['name'];
+            }
+
+            if(move_uploaded_file($_imgsp['tmp_name'], $fileName))
+            {
+                //have image
+                // $sql.=" ,avatar=:avatar";
             }else
             {
-                //update
-                if($_imgsp['size'] > 0)
-                {
-                    //neu co img update
-                    $fileName = 'upload/'.time()."-".$_imgsp['name'];
-                }
-    
-                if(move_uploaded_file($_imgsp['tmp_name'], $fileName))
-                {
-                    //have image
-                    // $sql.=" ,avatar=:avatar";
-                }else
-                {
-                    //no image
-                    $fileName = null;
-                }
-
-                $prd->img_sp = $fileName;
+                //no image
+                $fileName = null;
             }
-            
-            $prd->id_dm = 1;
+
+            $prd->id_dm = $_id_dm;
             $prd->ten_sp = $_tensp;
             $prd->sub_ten_sp = $_sub_tensp;
             $prd->sl_sp = $_slsp;
+            $prd->img_sp = $fileName;
 
 
             $prd->update($_GET['id']);
-            echo "done";
+            ?>
+                <script language="javascript">alert("Đã cập nhập thành công!");
+                 window.location = '../login';
+                </script>
+            <?php
 
             // if(!empty($_id_dm) && isset($_id_dm))
             // {

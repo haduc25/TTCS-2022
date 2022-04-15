@@ -7,7 +7,7 @@
             <textarea rows="5" cols="60" id="sub_tensp" class="form-control1" name="sub_tensp" placeholder=""><?= $value->sub_ten_sp ?></textarea>
 
             <label class="info-box-text mgl-28 mgt-16">Ảnh sản phẩm</label>
-            <?php if($value->img_sp){  $_SESSION['img'] = $value->img_sp ?>  <img src="../../<?= $value->img_sp ?>"  alt="<?= $value->ten_sp ?>" width="300" class="img-sp"> <?php } ?>
+            <?php if($value->img_sp){ ?>  <img src="../../<?= $value->img_sp ?>"  alt="<?= $value->ten_sp ?>" width="300" class="img-sp"> <?php } ?>
             <input type="file" id="imgsp" name="imgsp" class="mgl-28 w-20-percent">
 
             <label for="id_dm" class="info-box-text mgl-28 mgt-16">Danh mục sản phẩm</label>
