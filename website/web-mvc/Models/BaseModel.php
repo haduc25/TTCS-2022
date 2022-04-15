@@ -150,6 +150,23 @@ class BaseModel
             return null;  
         }
     }
+    
+    //delete
+    public function delete($id){
+        // var_dump($id); exit();
+        // var_dump($this->tableName); exit();
+        $this->queryBuilder = "delete from $this->tName where id_sp = $id";
+        // var_dump($queryBuilder); exit();
+
+        $stmt = $this->conn->prepare($this->queryBuilder);
+        try{
+
+            $stmt->execute();
+            return true;
+        }catch(Exception $ex){
+            var_dump($ex->getMessage());die;
+        }
+    }
 
 
 
