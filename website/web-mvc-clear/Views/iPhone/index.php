@@ -132,7 +132,7 @@
                       <h3><?=$prd1[0]->ten_sp?></h3>
                       <h1><?=$prd1[0]->sub_ten_sp?></h1>
                       <div class="top__title--links">
-                        <a class="btn-buy" href="">Mua ngay</a>
+                        <a class="btn-buy" href="add-cart/add?id=<?= $prd1[0]->id_sp ?>">Mua ngay</a>
                         <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
                       </div>
                     </div>
@@ -151,7 +151,7 @@
                       <h3><?= $prd2[0]->ten_sp ?></h3>
                       <h1><?= $prd2[0]->sub_ten_sp ?></h1>
                       <div class="top__title--links">
-                        <a class="btn-buy" href="">Mua ngay</a>
+                        <a class="btn-buy" href="add-cart/add?id=<?= $prd2[0]->id_sp ?>">Mua ngay</a>
                         <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
                       </div>
                     </div>
@@ -170,7 +170,7 @@
                       <h3><?= $prd3[0]->ten_sp ?></h3>
                       <h1><?= $prd3[0]->sub_ten_sp ?></h1>
                       <div class="top__title--links">
-                        <a class="btn-buy" href="">Mua ngay</a>
+                        <a class="btn-buy" href="add-cart/add?id=<?= $prd3[0]->id_sp ?>">Mua ngay</a>
                         <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
                       </div>
                     </div>
@@ -200,7 +200,7 @@
                             <h3><?= $prd4i->ten_sp ?></h3>
                             
                             <div class="buy-btn-details">
-                                <a class="btn-buy" href="">Mua ngay</a>
+                                <a class="btn-buy" href="add-cart/add?id=<?= $prd4i->id_sp ?>">Mua ngay</a>
                                 <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
                             </div>
 

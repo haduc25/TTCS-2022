@@ -53,15 +53,43 @@ class ProductsController
     
     public function add_cart()
     {
-        // $prd1 = Products::get1items(1, 3);
-        // $prd2 = Products::get1items(47, 3);
-        // $prd3 = Products::get1items(48, 3);
-
-        // $prd4item = Products::getNitems(3, 4); //(id_dm, limit)
-
         if(!empty($_GET['id']) && isset($_GET['id']))
         {
-            echo "have id";
+            $prd = new Products();
+            $value = $prd->find($_GET['id']);
+            switch($value->id_dm)
+            {
+                case 1:
+                    $_id_dm = "Macbook";
+                    break;
+                
+                case 2:
+                    $_id_dm = "iPad";
+                    break;
+                
+                case 3:
+                    $_id_dm = "iPhone";
+                    break;
+                
+                case 4:
+                    $_id_dm = "Apple Watch";
+                    break;
+                
+                case 5:
+                    $_id_dm = "Apple TV";
+                    break;
+                
+                case 6:
+                    $_id_dm = "Apple Music";
+                    break;
+                default:
+                    $_id_dm = "empty";
+                    echo "Lỗi danh mục k hợp lệ! vui lòng thử lại.";
+                    break;
+            }
+            // var_dump($value->ten_sp); exit;
+             require_once 'Views/cart/index.php';
+
         }
         //import index view (home)
         // require_once 'Views/cart/index.php';

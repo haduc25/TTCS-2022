@@ -67,7 +67,7 @@
           <a href="" class="dark-blue"
             >Xem thêm <img src="./public/svg/right-arrow-darkBlue.svg" alt=""
           /></a>
-          <a href="" class="dark-blue"
+          <a href="add-cart/add?id=<?= $prd2[0]->id_sp ?>" class="dark-blue"
             >Mua ngay <img src="./public/svg/right-arrow-darkBlue.svg" alt=""
           /></a>
         </div>
@@ -109,7 +109,7 @@
               <a href="" class="dark-blue"
                 >Xem thêm <img src="./public/svg/right-arrow-darkBlue.svg" alt=""
               /></a>
-              <a href="" class="dark-blue"
+              <a href="add-cart/add?id=<?= $prd5[0]->id_sp ?>" class="dark-blue"
                 >Mua ngay <img src="./public/svg/right-arrow-darkBlue.svg" alt=""
               /></a>
             </div>
@@ -130,7 +130,7 @@
                 <a href="" class="dark-blue"
                   >Xem thêm <img src="./public/svg/right-arrow-darkBlue.svg" alt=""
                 /></a>
-                <a href="" class="dark-blue"
+                <a href="#" class="dark-blue"
                   >Mua ngay
                   <img src="./public/svg/right-arrow-darkBlue.svg" alt=""
                 /></a>
@@ -156,7 +156,7 @@
               <a href="" class="dark-blue"
                 >Xem thêm <img src="./public/svg/right-arrow-darkBlue.svg" alt=""
               /></a>
-              <a href="" class="dark-blue"
+              <a href="add-cart/add?id=<?= $prd4[0]->id_sp ?>" class="dark-blue"
               >Mua ngay
               <img src="./public/svg/right-arrow-darkBlue.svg" alt=""
             /></a>
@@ -179,7 +179,7 @@
               <a href="" class="dark-blue"
                 >Xem thêm <img src="./public/svg/right-arrow-darkBlue.svg" alt=""
               /></a>
-              <a href="" class="dark-blue"
+              <a href="#" class="dark-blue"
                 >Mua ngay <img src="./public/svg/right-arrow-darkBlue.svg" alt=""
               /></a>
             </div>
@@ -222,10 +222,10 @@
               <img src="./public/img/logos/TVPlus.png" alt="TV plus" />
               <h3 class="white">Get three months of Apple TV+. free when you Mua ngay an Apple device.</h3>
               <div class="top__title--links">
-                <a href="" class="white"
+                <a href="#" class="white"
                   >Xem thêm <img src="./public/img/icons/arrow-29-32-white.png" alt=""
                 /></a>
-                <a href="" class="white"
+                <a href="#" class="white"
                   >Dùng thử miễn phí
                   <img src="./public/img/icons/icons8-up-right-48-white.png" alt=""
                 /></a>

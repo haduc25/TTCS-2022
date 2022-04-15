@@ -33,7 +33,7 @@
               <li><a href="">Watch</a></li>
               <li><a href="">Hỗ trợ</a></li>
               <li><a href="#"><img src="./public/svg/search.svg" alt="search" /></a></li>
-              <li><a href="add-cart"><img src="./public/svg/shopping-bag.svg" alt="shopping bag" /></a></li>
+              <li><a href="#"><img src="./public/svg/shopping-bag.svg" alt="shopping bag" /></a></li>
             </ul>
         </header>
 
@@ -133,7 +133,7 @@
                       <h3 style="color: #1d1d1f;"><?= $prd1item[0]->ten_sp ?></h3>
                       <h1 style="color: #1d1d1f;"><?= $prd1item[0]->sub_ten_sp ?></h1>
                       <div class="top__title--links">
-                        <a class="btn-buy" href="">Mua ngay</a>
+                        <a class="btn-buy" href="add-cart/add?id=<?= $prd1item[0]->id_sp ?>">Mua ngay</a>
                         <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
                       </div>
                     </div>
@@ -163,7 +163,7 @@
                             <h3><?= $prd3->ten_sp ?></h3>
 
                             <div class="buy-btn-details">
-                                <a class="btn-buy" href="">Mua ngay</a>
+                                <a class="btn-buy" href="add-cart/add?id=<?= $prd3->id_sp ?>">Mua ngay</a>
                                 <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
                             </div>
 
@@ -244,6 +244,20 @@
 
                         </div>
                         <!-- End: Note-nook -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                         <!-- desktop detail -->
                         <div class="desktop">

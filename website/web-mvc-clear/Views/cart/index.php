@@ -12,10 +12,588 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 
-    <link rel="stylesheet" href="./public/css/style.css" />
-    <link rel="icon" href="./public/img/icons/fav-icon-apple.png" type="image/x-icon" />
+    <link rel="icon" href="../public/img/icons/fav-icon-apple.png" type="image/x-icon" />
     <title>Apple (Hoàng Anh)</title>
     <style>
+      :root {
+        --greyDark: #333333;
+        --greyDark2: #1D1D1F;
+        --greyLight: #d6d6d6;
+        --greyLight2: #a1a1a6;
+        --white: #f5f5f7;
+        --text: #1d1d1f;
+        --blue: #0071e3;
+        --a: #2997ff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+      }
+
+      a {
+        text-decoration: none;
+        font-weight: 300;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .black {
+        color: var(--text) !important;
+      }
+
+      .white {
+        color: var(--white) !important;
+      }
+
+      .dark-blue {
+        color: #06c !important;
+      }
+
+
+      header {
+        width: 100%;
+        height: 45px;
+        background: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+                backdrop-filter: saturate(180%) blur(20px);
+      }
+
+      header ul {
+        height: 100%;
+        width: 100%;
+        max-width: 1000px;
+        margin: auto;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        list-style: none;
+      }
+
+      header ul li a{
+        cursor: pointer;
+        text-decoration: none;
+        color: var(--greyLight);
+      }
+
+      header ul li a:hover {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      header ul li img {
+        width: 18px;
+        height: 18px;
+        opacity: .8;
+      }
+
+      header ul li img:hover {
+        opacity: 1;
+
+      }
+
+      .information {
+        height: 45px;
+        width: 100%;
+        background: var(--blue);
+        text-align: center;
+        line-height: 45px;
+        margin-top: 45px;
+      }
+
+      .information img {
+        width: 10px;
+      }
+
+      .information a {
+        color: #fff;
+      }
+
+      .information-2 {
+        background: #fff;
+        color: var(--text);
+        margin: 0;
+      }
+
+      .information-2 a {
+        color: var(--blue);
+      }
+
+      .top__title {
+        margin-top: 52px;
+        color: var(--greyDark2);
+        text-align: center;
+        z-index: 3;
+      }
+
+
+
+
+
+      .top__title h1 {
+        font-size: 52px;
+        font-weight: 500;
+        letter-spacing: -1px;
+      }
+
+      .top__title h3 {
+        margin-top: 3px;
+        font-size: 26px;
+        font-weight: 400;
+      }
+
+      .top__title h4 {
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: 3px;
+        margin-bottom: 15px;
+        color: #d01f2a;
+      }
+
+      .top__title--links {
+        margin-top: 12px;
+      }
+
+      .top__title--links a {
+        font-size: 21px;
+        font-weight: 400;
+        color: var(--a);
+      }
+
+      .top__title--links a:nth-child(2) {
+        margin-left: 30px;
+      }
+
+      .top__title--links a img {
+        width: 12px;
+      }
+
+
+      .top__title2 {
+        position: absolute;
+        top: 0;
+        left: 40%;
+        right: 40%;
+        margin-top: 52px;
+        color: var(--greyDark2);
+        text-align: center;
+        z-index: 3;
+      }
+
+      .top__title2 h1 {
+        font-size: 52px;
+        font-weight: 500;
+        letter-spacing: -1px;
+      }
+
+      .top__title2 h3 {
+        margin-top: 3px;
+        font-size: 26px;
+        font-weight: 400;
+      }
+
+      .top__title2 h4 {
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: 3px;
+        margin-bottom: 15px;
+        color: #d01f2a;
+      }
+
+      .top__title2--links {
+        margin-top: 12px;
+      }
+
+      .top__title2--links a {
+        font-size: 21px;
+        font-weight: 400;
+        color: var(--a);
+      }
+
+      .top__title2--links a:nth-child(2) {
+        margin-left: 30px;
+      }
+
+      .top__title2--links a img {
+        width: 12px;
+      }
+
+      .bottom__title {
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+        bottom: 50px;
+        text-align: center;
+        z-index: 3;
+      }
+
+      /* .bottom__title h2 {
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 30px;
+        color: var(--greyLight2);
+      }
+
+      .bottom__title h2:nth-child(1) {
+        color: var(--white);
+        font-weight: 600;
+      }
+
+      .bottom__title h2:nth-child(4) {
+        margin-top: 20px;
+      } */
+
+      .background {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 120%;
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+      }
+
+      .section1 {
+        height: 820px;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .section1 .background {
+        top: -13%;
+      }
+
+      .section2 {
+        height: 950px;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        margin-top: 10px;
+      }
+
+      .section2 .background {
+        top: -13%;
+      }
+
+
+      .section22 {
+        height: 600px;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        margin-top: 10px;
+        padding-top: 350px;
+      }
+
+      .bottom__title2 {
+        position: absolute;
+        top: 600px;
+        left: 0;
+        right: 0;
+        bottom: 50px;
+        text-align: center;
+        z-index: 3;
+        background-color: #f5f5f7;
+        width: 100%;
+        height: 100%;
+      }
+
+      .section22 .background {
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 600px;
+      }
+
+      .section22 h1 {
+        font-size: 38px;
+        font-weight: 700;
+        letter-spacing: 2px;
+      }
+
+      .section22 h1 img {
+        width: 50px;
+        /* margin-right: 5px;
+        margin-top: 5px; */
+      }
+
+      .section3 {
+        width: 100%;
+        height: 690px;
+        overflow: hidden;
+        position: relative;
+        background: #000;
+      }
+
+      .section3 h1 {
+        font-size: 38px;
+        font-weight: 700;
+        letter-spacing: 2px;
+      }
+
+      .section3 h1 img {
+        width: 38px;
+      }
+
+      .section3 .background {
+        width: 280px;
+        height: 450px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+        z-index: 1;
+      }
+
+      .section4 {
+        margin-top: 10px;
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        overflow: hidden;
+      }
+
+      .section4 .row {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        margin-bottom: 10px;
+      }
+
+      .section4__item {
+        height: 590px;
+        -webkit-box-flex: 0.497;
+            -ms-flex: 0.497;
+                flex: 0.497;
+        position: relative;
+        overflow: hidden;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        background: #fbfbfb;
+      }
+
+      .section4__item h1 {
+        font-size: 40px;
+      }
+
+      .section4__item h1 img {
+        width: 30px;
+      }
+
+      .section4__item h3 {
+        max-width: 298px;
+        font-size: 21px;
+        font-weight: 400;
+      }
+
+      .section4__item h4 {
+        font-size: 12px;
+        letter-spacing: normal;
+        margin-bottom: 0;
+      }
+
+      .section4__item a {
+        font-size: 17px;
+      }
+
+      .section4__item a img {
+        width: 10px;
+      }
+
+      .section4__item .background {
+        height: 100%;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+        z-index: 2;
+      }
+
+      .section4__item .homePod {
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+        bottom: 50px;
+      }
+
+      .section4__item .one {
+        width: 550px;
+        height: 350px;
+      }
+
+      .section4__item .subTitle {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+      }
+
+      .section4__item .subTitle a {
+        height: 20px;
+        width: 110px;
+        margin: auto;
+        margin-top: 10px;
+        color: #000;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+      }
+
+      .section4__item .subTitle a img {
+        width: 18px;
+        margin-left: 5px;
+      }
+
+      .footer {
+        width: 100%;
+        height: 810px;
+        background: var(--white);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+      }
+
+      .footer__wrapper {
+        width: 970px;
+      }
+
+      .footer ul {
+        font-size: 12px;
+        list-style: none;
+        color: #86868b;
+        border-bottom: 1px solid var(--greyLight);
+      }
+
+      .footer ul li {
+        margin: 15px 0;
+        letter-spacing: 0.1px;
+      }
+
+      .footer__links {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+      }
+
+      .footer__links--column {
+        width: 200px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+      }
+
+      .footer__links--column-title {
+        font-weight: 400;
+        font-size: 12px;
+        margin-top: 18px;
+        margin-bottom: 15px;
+        letter-spacing: 0.5px;
+      }
+
+      .footer__links--column a {
+        font-size: 12px;
+        color: #515154;
+        margin-bottom: 12px;
+      }
+
+      .footer__more {
+        font-size: 13px;
+        color: #86868b;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--greyLight);
+      }
+
+      .footer__more a {
+        color: #06c;
+      }
+
+      .footer__copyright {
+        width: 100%;
+        height: 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        font-size: 13px;
+        color: #86868b;
+        margin-top: 4px;
+        position: relative;
+      }
+
+      .footer__copyright .links {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+      }
+
+      .footer__copyright .links a {
+        padding: 0 10px;
+        color: #515154;
+        border-left: 1px solid var(--greyLight);
+      }
+
+      .footer__copyright .links a:nth-child(1) {
+        border: none;
+      }
+      # sourceMappingURL=style.css.map
       .space-200
       {
         width: 100%;
@@ -41,15 +619,14 @@
     <!-- Header -->
     <header>
       <ul>
-        <!-- <li><img src="./public/svg/apple.svg" alt="apple" /></li> -->
-        <li><a href="./">Trang chủ</a></li> 
-        <li><a href="mac">Mac</a></li>
-        <li><a href="ipad">iPad</a></li>
-        <li><a href="iphone">iPhone</a></li>
+        <li><a href="../">Trang chủ</a></li> 
+        <li><a href="../mac">Mac</a></li>
+        <li><a href="../ipad">iPad</a></li>
+        <li><a href="../iphone">iPhone</a></li>
         <li><a href="">Watch</a></li>
         <li><a href="">Hỗ trợ</a></li>
-        <li><a href="#"><img src="./public/svg/search.svg" alt="search" /></a></li>
-        <li><a href=""><img src="./public/svg/shopping-bag.svg" alt="shopping bag" /></a></li>
+        <li><a href="#"><img src="../public/svg/search.svg" alt="search" /></a></li>
+        <li><a href=""><img src="../public/svg/shopping-bag.svg" alt="shopping bag" /></a></li>
       </ul>
     </header>
     <!-- SECTIONS -->
@@ -90,13 +667,13 @@
                         <th scope="row" class="border-0">
                           <div class="p-2">
                             <a href="./cart.php?action=delete&id=<?=$row['id']?>" class="text-dark" style="position: relative; left: -20px;"><i class="fa fa-trash"></i></a>
-                            <img src="https://bootstrapious.com/i/snippets/sn-cart/product-1.jpg" alt="" width="70" class="img-fluid rounded shadow-sm">
+                            <img src="../<?=$value->img_sp?>" alt="<?=$value->ten_sp?>" width="70" class="img-fluid rounded shadow-sm">
                             <div class="ml-3 d-inline-block align-middle">
-                              <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">Timex Unisex Originals</a></h5><span class="text-muted font-weight-normal font-italic d-block">Thể loại: Watches</span>
+                              <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle"><?=$value->ten_sp?></a></h5><span class="text-muted font-weight-normal font-italic d-block">Thể loại: <?php if($_id_dm != "empty"){echo $_id_dm;} ?></span>
                             </div>
                           </div>
                         </th>
-                        <td class="border-0 align-middle"><strong>$79.00</strong></td>
+                        <td class="border-0 align-middle"><strong>$799.00</strong></td>
                         <td class="border-0 align-middle">
                           <input class="quantity12" min="0" name="quantity" value="1" type="number" size="2" style="width: 50px;">
                         </td>
@@ -104,7 +681,7 @@
                     </tbody>
                   </table>
                 <!-- btn -->
-                  <a href="./"><input class="btn btn-dark px-4 rounded-pill" style="float: left;" type="button" name="back" value="Tiếp tục mua sắm";></a>
+                  <a href="../"><input class="btn btn-dark px-4 rounded-pill" style="float: left;" type="button" name="back" value="Tiếp tục mua sắm";></a>
                   <input class="btn btn-dark px-4 rounded-pill" style="float: right; " type="submit" name="update_click" value="Cập nhật giỏ hàng">
                 
                 <!-- end: btn -->
