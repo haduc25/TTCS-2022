@@ -301,10 +301,8 @@ class AdminController
     }
 
 
-    
-
     //admin -> del
-    public function create_pages_del()
+    public function admin_del()
     {
         // require_once "Views/admin/admin_del.php";
         if (isset($_GET['id']) && !empty($_GET['id'])) 
@@ -320,6 +318,75 @@ class AdminController
                 window.location = '../login';
                 </script>
             <?php
+            // var_dump($prd->delete($_GET['id'])); exit;
+			// header("Location: ../login");
+        }
+    }
+    
+
+    //admin -> edit page
+    public function admin_pages_edit()
+    {
+        if (isset($_GET['id']) && !empty($_GET['id'])) 
+        {
+            $prd = new Products();
+            
+            if(($prd->find($_GET['id']) != NULL))
+            {
+                $value = $prd->find($_GET['id']);
+                // var_dump($value->id_sp); exit;
+                // var_dump($value->id_dm); exit;
+                // var_dump($value->img_sp); exit;
+
+                switch($value->id_dm)
+                {
+                    case 1:
+                        $_id_dm = "Macbook";
+                        break;
+                    
+                    case 2:
+                        $_id_dm = "iPad";
+                        break;
+                    
+                    case 3:
+                        $_id_dm = "iPhone";
+                        break;
+                    
+                    case 4:
+                        $_id_dm = "Apple Watch";
+                        break;
+                    
+                    case 5:
+                        $_id_dm = "Apple TV";
+                        break;
+                    
+                    case 6:
+                        $_id_dm = "Apple Music";
+                        break;
+                    default:
+                        $_id_dm = "empty";
+                        echo "Lỗi danh mục k hợp lệ! vui lòng thử lại.";
+                        break;
+                }
+
+                $this->_name_h1_1 = "Chỉnh sửa sản phẩm";
+                require_once "Views/admin/admin_edit.php";
+            }
+        }
+    }
+
+    //admin -> submit edit
+    public function admin_edit()
+    {
+        // require_once "Views/admin/admin_del.php";
+        if (isset($_GET['id']) && !empty($_GET['id'])) 
+        {
+            $prd = new Products();
+			// echo $_GET['id'];
+			// var_dump($_GET['id']); exit();
+
+			// $prd->delete($_GET['id']);
+            
             // var_dump($prd->delete($_GET['id'])); exit;
 			// header("Location: ../login");
         }

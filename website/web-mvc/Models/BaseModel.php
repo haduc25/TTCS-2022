@@ -136,9 +136,10 @@ class BaseModel
 
     //find 
     public static function find($id){
+        // var_dump($id); exit;
         // echo $id; die;
         $model = new static();
-        $sql = "select * from $model->tableName where id = $id";
+        $sql = "select * from $model->tName where id_sp = $id";
         $stmt = $model->conn->prepare($sql);
         $stmt->execute();
         $result = $stmt->fetchAll(PDO::FETCH_CLASS, get_class($model));

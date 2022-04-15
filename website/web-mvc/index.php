@@ -63,14 +63,21 @@
         case 'admin/login/del':
             $ctl = new AdminController();
             // echo "click to del";
-            $ctl->create_pages_del();
+            $ctl->admin_del();
             break;
 
-        //admin/insert-prod
-        case 'admin/login/insert-prod1':
+        //admin/edit -> pages
+        case 'admin/login/edit':
             $ctl = new AdminController();
-            // echo "click to insert-prod";
-            //$ctl->admin_insert();
+            // echo "click to edit page create!";
+            $ctl->admin_pages_edit();
+            break;
+
+        //admin/edit
+        case 'admin/login/edit-prod':
+            $ctl = new AdminController();
+            // echo "click to edit-prod";
+            $ctl->admin_edit();
             break;
 
 
