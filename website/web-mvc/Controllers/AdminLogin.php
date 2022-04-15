@@ -308,17 +308,20 @@ class AdminController
     {
         // $this->_name_h1_1 = "Thêm sản phẩm";
         // require_once "Views/admin/admin_del.php";
+        if (isset($_GET['id']) && !empty($_GET['id'])) 
+        {
+            // var_dump($_GET['id']);
         ?>
-        <script>
-        if (confirm('Are you sure you want to save this thing into the database?')) {
-            // Save it!
-            console.log('Thing was saved to the database.');
-          } else {
-            // Do nothing!
-            console.log('Thing was not saved to the database.');
-          }
-        </script>
-          <?php
+            <script>
+            if (confirm('Are you sure you want to save this thing into the database?')) {
+                // Save it!
+                console.log('Thing was saved to the database.');
+            } else {
+                // Do nothing!
+                console.log('Thing was not saved to the database.');
+            }
+            </script>
+          <?php }
     }
 
 
