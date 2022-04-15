@@ -19,7 +19,7 @@
               <!-- <li><img src="./svg/apple.svg" alt="apple" /></li> -->
               <li><a href="./">Trang chủ</a></li>
               <li><a href="">Mac</a></li>
-              <li><a href="">iPad</a></li>
+              <li><a href="ipad">iPad</a></li>
               <li><a href="">iPhone</a></li>
               <li><a href="">Watch</a></li>
               <li><a href="">TV</a></li>

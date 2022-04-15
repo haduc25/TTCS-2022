@@ -20,6 +20,11 @@
             $ctl->index();
             break;
 
+        case 'ipad':
+            $ctl = new ProductsController();
+            $ctl->index_iPad();
+            break;
+
         // Admin
         case 'admin':
             $ctl = new AdminController();

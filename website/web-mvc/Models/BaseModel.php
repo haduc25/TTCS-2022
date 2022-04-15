@@ -44,6 +44,18 @@ class BaseModel
 
     }
 
+    //select n items detail have limit from sql
+    public static function getNitems($limit)
+    {
+        $model = new static();
+        $sql = "select * from `products_detail`, `products` where products_detail.id_sp = products.id_sp limit $limit";
+        $stmt = $model->conn->prepare($sql);
+        $stmt->execute();
+        $rs = $stmt->fetchAll(PDO::FETCH_CLASS, get_class($model));
+        return $rs;
+
+    }
+
     //select all admin voi category = macbook
     public static function getAllAdmin($category)
     {
@@ -119,7 +131,7 @@ class BaseModel
         }
 
         $this->queryBuilder = rtrim($this->queryBuilder, ", ");
-        // var_dump($this->queryBuilder); exit;
+        // var_dump($this->queryBuilder); exit;get1items
 
         $this->queryBuilder .= " where id_sp = $id";
 
