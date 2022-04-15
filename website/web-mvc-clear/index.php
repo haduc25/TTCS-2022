@@ -118,7 +118,7 @@
         case 'add-cart/add':
             // echo "wanna them vao cart";
             $ctl = new ProductsController();
-            // $ctl->index();
+            $ctl->add_cart();
             break;
 
         default:

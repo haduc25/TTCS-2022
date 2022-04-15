@@ -24,6 +24,11 @@
         border-bottom: 2px solid #ccc;
       }
 
+      .pdt-80
+      {
+        padding-top: 80px;
+      }
+
       body {
         background: #eecda3;
         background: -webkit-linear-gradient(to right, #eecda3, #ef629f);
@@ -52,11 +57,7 @@
       <div class="px-4 px-lg-0">
         <!-- For demo purpose -->
         <div class="container text-white py-5 text-center">
-          <h1 class="display-4">Bootstrap 4 shopping cart</h1>
-          <p class="lead mb-0">Build a fully structred shopping cart page using Bootstrap 4. </p>
-          <p class="lead">Snippet by <a href="https://bootstrapious.com/snippets" class="text-white font-italic">
-                  <u>Bootstrapious</u></a>
-          </p>
+          <h1 class="display-4 pdt-80">Giỏ hàng</h1>
         </div>
         <!-- End -->
 
@@ -74,13 +75,13 @@
                           <div class="p-2 px-3 text-uppercase">Sản phẩm</div>
                         </th>
                         <th scope="col" class="border-0 bg-light">
-                          <div class="py-2 text-uppercase">Price</div>
+                          <div class="py-2 text-uppercase">Giá</div>
                         </th>
                         <th scope="col" class="border-0 bg-light">
-                          <div class="py-2 text-uppercase">Quantity</div>
+                          <div class="py-2 text-uppercase">Số lượng</div>
                         </th>
                         <th scope="col" class="border-0 bg-light">
-                          <div class="py-2 text-uppercase">Remove</div>
+                          <div class="py-2 text-uppercase">Thành tiền</div>
                         </th>
                       </tr>
                     </thead>
@@ -88,81 +89,59 @@
                       <tr>
                         <th scope="row" class="border-0">
                           <div class="p-2">
+                            <a href="./cart.php?action=delete&id=<?=$row['id']?>" class="text-dark" style="position: relative; left: -20px;"><i class="fa fa-trash"></i></a>
                             <img src="https://bootstrapious.com/i/snippets/sn-cart/product-1.jpg" alt="" width="70" class="img-fluid rounded shadow-sm">
                             <div class="ml-3 d-inline-block align-middle">
-                              <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">Timex Unisex Originals</a></h5><span class="text-muted font-weight-normal font-italic d-block">Category: Watches</span>
+                              <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">Timex Unisex Originals</a></h5><span class="text-muted font-weight-normal font-italic d-block">Thể loại: Watches</span>
                             </div>
                           </div>
                         </th>
                         <td class="border-0 align-middle"><strong>$79.00</strong></td>
-                        <td class="border-0 align-middle"><strong>3</strong></td>
-                        <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">
-                          <div class="p-2">
-                            <img src="https://bootstrapious.com/i/snippets/sn-cart/product-2.jpg" alt="" width="70" class="img-fluid rounded shadow-sm">
-                            <div class="ml-3 d-inline-block align-middle">
-                              <h5 class="mb-0"><a href="#" class="text-dark d-inline-block">Lumix camera lense</a></h5><span class="text-muted font-weight-normal font-italic">Category: Electronics</span>
-                            </div>
-                          </div>
-                        </th>
-                        <td class="align-middle"><strong>$79.00</strong></td>
-                        <td class="align-middle"><strong>3</strong></td>
-                        <td class="align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a>
+                        <td class="border-0 align-middle">
+                          <input class="quantity12" min="0" name="quantity" value="1" type="number" size="2" style="width: 50px;">
                         </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">
-                          <div class="p-2">
-                            <img src="https://bootstrapious.com/i/snippets/sn-cart/product-3.jpg" alt="" width="70" class="img-fluid rounded shadow-sm">
-                            <div class="ml-3 d-inline-block align-middle">
-                              <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block">Gray Nike running shoe</a></h5><span class="text-muted font-weight-normal font-italic">Category: Fashion</span>
-                            </div>
-                          </div>
-                          <td class="align-middle"><strong>$79.00</strong></td>
-                          <td class="align-middle"><strong>3</strong></td>
-                          <td class="align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a>
-                          </td>
                       </tr>
                     </tbody>
                   </table>
+                <!-- btn -->
+                  <a href="./"><input class="btn btn-dark px-4 rounded-pill" style="float: left;" type="button" name="back" value="Tiếp tục mua sắm";></a>
+                  <input class="btn btn-dark px-4 rounded-pill" style="float: right; " type="submit" name="update_click" value="Cập nhật giỏ hàng">
+                
+                <!-- end: btn -->
+
                 </div>
                 <!-- End -->
               </div>
             </div>
 
             <div class="row py-5 p-4 bg-white rounded shadow-sm">
-              <div class="col-lg-6">
-                <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Coupon code</div>
+              <div class="col-lg-12">
+                <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold text-center">Thông tin khách hàng</div>
                 <div class="p-4">
-                  <p class="font-italic mb-4">If you have a coupon code, please enter it in the box below</p>
+                  <!-- <p class="font-italic mb-4">If you have a coupon code, please enter it in the box below</p>
                   <div class="input-group mb-4 border rounded-pill p-2">
                     <input type="text" placeholder="Apply coupon" aria-describedby="button-addon3" class="form-control border-0">
                     <div class="input-group-append border-0">
                       <button id="button-addon3" type="button" class="btn btn-dark px-4 rounded-pill"><i class="fa fa-gift mr-2"></i>Apply coupon</button>
                     </div>
+                  </div> -->
+                  <p class='font-italic mb-4'>Bạn đã có tài khoản? <a href='#'>Đăng nhập</a></p>
+                  <div class="form-group"> <label for="NAME" class="small text-muted mb-1">Họ và tên</label> <input type="text" class="form-control form-control-sm" name="NAME" id="NAME" aria-describedby="helpId" placeholder="Họ và Tên"> </div>
+                  <div class="row no-gutters">
+                      <div class="col-sm-6 pr-sm-2">
+                          <div class="form-group"> <label for="NAME" class="small text-muted mb-1">E-mail</label> <input type="text" class="form-control form-control-sm" name="NAME" id="NAME" aria-describedby="helpId" placeholder="Example@email.com"> </div>
+                      </div>
+                      <div class="col-sm-6">
+                          <div class="form-group"> <label for="NAME" class="small text-muted mb-1">Số điện thoại</label> <input type="text" class="form-control form-control-sm" name="NAME" id="NAME" aria-describedby="helpId"> </div>
+                      </div>
+                  </div>           
+                  <div class="form-group"> <label for="NAME" class="small text-muted mb-1">Địa chỉ</label> <input type="text" class="form-control form-control-sm" name="NAME" id="NAME" aria-describedby="helpId"> </div>                
+                  <div class="form-group"> 
+                    <label for="NAME" class="small text-muted mb-1">Ghi chú</label>
+                    <textarea name="" cols="30" rows="8" class="form-control"></textarea>
                   </div>
                 </div>
-                <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Instructions for seller</div>
-                <div class="p-4">
-                  <p class="font-italic mb-4">If you have some information for the seller you can leave them in the box below</p>
-                  <textarea name="" cols="30" rows="2" class="form-control"></textarea>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Order summary </div>
-                <div class="p-4">
-                  <p class="font-italic mb-4">Shipping and additional costs are calculated based on values you have entered.</p>
-                  <ul class="list-unstyled mb-4">
-                    <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Order Subtotal </strong><strong>$390.00</strong></li>
-                    <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Shipping and handling</strong><strong>$10.00</strong></li>
-                    <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tax</strong><strong>$0.00</strong></li>
-                    <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
-                      <h5 class="font-weight-bold">$400.00</h5>
-                    </li>
-                  </ul><a href="#" class="btn btn-dark rounded-pill py-2 btn-block">Procceed to checkout</a>
-                </div>
+                <a href="#" class="btn btn-dark rounded-pill py-2 btn-block">Đặt hàng và đến phương thức thanh toán</a>
               </div>
             </div>
 
