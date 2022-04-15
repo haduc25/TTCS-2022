@@ -9,8 +9,7 @@ class ProductsController
         //$prds: products
         //gán bien prds tro den function -> all() (lay tat ca dl trong bang)
         $prd1item = Products::get1items(2, 1);
-        
-        $prd3item = Products::getNitems(1, 3);
+        $prd3item = Products::getNitems(1, 3); //$id_sp, $id_dm
 
         //import index view (home)
         require_once 'Views/mac/index.php';

@@ -24,7 +24,7 @@
     <!-- Header -->
     <header>
       <ul>
-        <!-- <li><img src="./svg/apple.svg" alt="apple" /></li> -->
+        <!-- <li><img src="./public/svg/apple.svg" alt="apple" /></li> -->
         <li><a href="">Trang chủ</a></li> 
         <li><a href="./mac">Mac</a></li>
         <li><a href="ipad">iPad</a></li>
@@ -40,7 +40,7 @@
     <!-- <div class="information">
       <a href=""
         >Evaluate COVID-19 symptoms and understand next steps
-        <img src="./svg/right-arrow.svg" alt="" />
+        <img src="./public/svg/right-arrow.svg" alt="" />
       </a>
     </div>
     <div class="information information-2">
@@ -58,17 +58,17 @@
     <section class="section1">
       <div
         class="background"
-        style="background-image: url(./public/img/iPhone\ 12.jpg)"
+        style="background-image: url(./<?= $prd1[0]->img_sp ?>)"
       ></div>
-
+        
       <div class="top__title">
-        <h1 style="color: #f5f5f7;">iPhone 13 Pro </h1>
-        <h3 style="color: #f5f5f7;">Oh. So. Pro. </h3>
+        <h1 style="color: #f5f5f7;"><?= $prd1[0]->ten_sp ?></h1>
+        <h3 style="color: #f5f5f7;"><?= $prd1[0]->sub_ten_sp ?></h3>
         <div class="top__title--links">
           <a href=""
-            >Xem thêm <img src="./svg/right-arrow-blue.svg" alt=""
+            >Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt=""
           /></a>
-          <a href="">Mua ngay <img src="./svg/right-arrow-blue.svg" alt="" /></a>
+          <a href="">Mua ngay <img src="./public/svg/right-arrow-blue.svg" alt="" /></a>
         </div>
       </div>
 
@@ -83,18 +83,18 @@
     <section class="section2">
       <div
         class="background"
-        style="background-image: url(./img/s-2.jpg)"
+        style="background-image: url(./<?= $prd2[0]->img_sp ?>"
       ></div>
 
       <div class="top__title2">
-        <h1 class="black">iPhone 13</h1>
-        <h3 class="black">Your new superpower.</h3>
+        <h1 class="black"><?= $prd2[0]->ten_sp ?></h1>
+        <h3 class="black"><?= $prd2[0]->sub_ten_sp ?></h3>
         <div class="top__title--links">
           <a href="" class="dark-blue"
-            >Xem thêm <img src="./svg/right-arrow-darkBlue.svg" alt=""
+            >Xem thêm <img src="./public/svg/right-arrow-darkBlue.svg" alt=""
           /></a>
           <a href="" class="dark-blue"
-            >Mua ngay <img src="./svg/right-arrow-darkBlue.svg" alt=""
+            >Mua ngay <img src="./public/svg/right-arrow-darkBlue.svg" alt=""
           /></a>
         </div>
       </div>
@@ -110,18 +110,18 @@
     <section class="section22">
       <div
         class="background"
-        style="background-image: url(./img/test/hero_Watch.jpg)"
+        style="background-image: url(./<?= $prd3[0]->img_sp ?>)"
       ></div>
 
       <div class="top__title2">
-        <img src="./img/logos/watch.png" alt="apple" />
-        <h3>Introducing our largest display yet.</h3>
+        <img src="./public/img/logos/watch.png" alt="apple" />
+        <h3><?= $prd3[0]->sub_ten_sp ?></h3>
         <div class="top__title--links">
           <a href="" class="dark-blue"
-            >Xem thêm <img src="./svg/right-arrow-darkBlue.svg" alt=""
+            >Xem thêm <img src="./public/svg/right-arrow-darkBlue.svg" alt=""
           /></a>
           <a href="" class="dark-blue"
-            >Mua ngay <img src="./svg/right-arrow-darkBlue.svg" alt=""
+            >Mua ngay <img src="./public/svg/right-arrow-darkBlue.svg" alt=""
           /></a>
         </div>
       </div>
@@ -134,18 +134,18 @@
     <!-- <section class="section3">
       <div
         class="background"
-        style="background-image: url(./img/test/ip132.jpg)"
+        style="background-image: url(./public/img/test/ip132.jpg)"
       ></div>
 
       <div class="top__title">
-        <h1><img src="./svg/apple.svg" alt="apple" />WATCH</h1>
+        <h1><img src="./public/svg/apple.svg" alt="apple" />WATCH</h1>
         <h4>SERIES 6</h4>
         <h3>The future of health is on your wrist.</h3>
         <div class="top__title--links">
           <a href=""
-            >Xem thêm <img src="./svg/right-arrow-blue.svg" alt=""
+            >Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt=""
           /></a>
-          <a href="">Mua ngay <img src="./svg/right-arrow-blue.svg" alt="" /></a>
+          <a href="">Mua ngay <img src="./public/svg/right-arrow-blue.svg" alt="" /></a>
         </div>
       </div>
     </section> -->
@@ -155,18 +155,18 @@
         <div class="section4__item">
           <div
             class="background"
-            style="background-image: url(./img/test/tile_macbookpro__cx0ur0qg9biq_large.jpg)"
+            style="background-image: url(./public/img/test/tile_macbookpro__cx0ur0qg9biq_large.jpg)"
           ></div>
 
           <div class="top__title">
-            <h1 class="black">MacBook Pro</h1>
-            <h3 class="black">Supercharged for pros.</h3>
+            <h1 class="black"><?= $prd5[0]->ten_sp ?></h1>
+            <h3 class="black"><?= $prd5[0]->sub_ten_sp ?></h3>
             <div class="top__title--links">
               <a href="" class="dark-blue"
-                >Xem thêm <img src="./svg/right-arrow-darkBlue.svg" alt=""
+                >Xem thêm <img src="./public/svg/right-arrow-darkBlue.svg" alt=""
               /></a>
               <a href="" class="dark-blue"
-                >Mua ngay <img src="./svg/right-arrow-darkBlue.svg" alt=""
+                >Mua ngay <img src="./public/svg/right-arrow-darkBlue.svg" alt=""
               /></a>
             </div>
           </div>
@@ -175,7 +175,7 @@
         <div class="section4__item">
           <div
             class="background"
-            style="background-image: url(./img/test/tile_airpods__fuv6vgn42y2q_large.jpg)"
+            style="background-image: url(./public/img/test/tile_airpods__fuv6vgn42y2q_large.jpg)"
           ></div>
 
           <div class="top__title">
@@ -184,11 +184,11 @@
               <h3 class="black">All-new with Spatial Audio.</h3>
               <div class="top__title--links">
                 <a href="" class="dark-blue"
-                  >Xem thêm <img src="./svg/right-arrow-darkBlue.svg" alt=""
+                  >Xem thêm <img src="./public/svg/right-arrow-darkBlue.svg" alt=""
                 /></a>
                 <a href="" class="dark-blue"
                   >Mua ngay
-                  <img src="./svg/right-arrow-darkBlue.svg" alt=""
+                  <img src="./public/svg/right-arrow-darkBlue.svg" alt=""
                 /></a>
               </div>
             </div>
@@ -200,21 +200,21 @@
         <div class="section4__item">
           <div
             class="background one"
-            style="background-image: url(./img/test/promo_ipad_mini__spq4zjcuuaie_large.jpg)"
+            style="background-image: url(./public/img/test/promo_ipad_mini__spq4zjcuuaie_large.jpg)"
           ></div>
 
           <div class="top__title">
-            <img src="./img/logos/iPadMini.png" alt="apple" />
+            <img src="./public/img/logos/iPadMini.png" alt="apple" />
             <h3 class="black">
-              Mega power. Mini sized.
+              <?=$prd4[0]->sub_ten_sp?>
             </h3>
             <div class="top__title--links">
               <a href="" class="dark-blue"
-                >Xem thêm <img src="./svg/right-arrow-darkBlue.svg" alt=""
+                >Xem thêm <img src="./public/svg/right-arrow-darkBlue.svg" alt=""
               /></a>
               <a href="" class="dark-blue"
               >Mua ngay
-              <img src="./svg/right-arrow-darkBlue.svg" alt=""
+              <img src="./public/svg/right-arrow-darkBlue.svg" alt=""
             /></a>
             </div>
           </div>
@@ -223,20 +223,20 @@
         <div class="section4__item">
           <div
             class="background"
-            style="background-image: url(./img/test/promo_airtag__e6b73a64nno2_large.jpg)"
+            style="background-image: url(./public/img/test/promo_airtag__e6b73a64nno2_large.jpg)"
           ></div>
 
           <div class="top__title">
-            <img src="./img/logos/airtag.png" alt="airtag" />
+            <img src="./public/img/logos/airtag.png" alt="airtag" />
             <h3 class="black">
-              Lose your knack for losing things.
+              Tìm mọi thứ dễ dàng hơn
             </h3>
             <div class="top__title--links">
               <a href="" class="dark-blue"
-                >Xem thêm <img src="./svg/right-arrow-darkBlue.svg" alt=""
+                >Xem thêm <img src="./public/svg/right-arrow-darkBlue.svg" alt=""
               /></a>
               <a href="" class="dark-blue"
-                >Mua ngay <img src="./svg/right-arrow-darkBlue.svg" alt=""
+                >Mua ngay <img src="./public/svg/right-arrow-darkBlue.svg" alt=""
               /></a>
             </div>
           </div>
@@ -247,20 +247,20 @@
         <div class="section4__item">
           <div
             class="background"
-            style="background-image: url(./img/test/title_1.jpg)"
+            style="background-image: url(./public/img/test/title_1.jpg)"
           ></div>
 
           <div class="top__title">
-            <img src="./img/logos/arcade.png" alt="arcade" />
+            <img src="./public/img/logos/arcade.png" alt="arcade" />
             <h3 class="black">
-                Calling all players.
+                Kêu gọi tất cả người chơi.
             </h3>
             <div class="top__title--links">
               <a href="" class="dark-blue"
-                >Xem thêm <img src="./svg/right-arrow-darkBlue.svg" alt=""
+                >Xem thêm <img src="./public/svg/right-arrow-darkBlue.svg" alt=""
               /></a>
               <a href="" class="dark-blue"
-                >Dùng thử miễn phí* <img src="./img/icons/icons8-up-right-48-darkBlue.png" alt=""
+                >Dùng thử miễn phí* <img src="./public/img/icons/icons8-up-right-48-darkBlue.png" alt=""
             /></a>
             </div>
           </div>
@@ -269,21 +269,21 @@
         <div class="section4__item">
           <div
             class="background"
-            style="background-image: url(./img/test/title_2.jpg)"
+            style="background-image: url(./public/img/test/title_2.jpg)"
           ></div>
 
 
           <div class="top__title">
             <div class="homePod">
-              <img src="./img/logos/TVPlus.png" alt="TV plus" />
+              <img src="./public/img/logos/TVPlus.png" alt="TV plus" />
               <h3 class="white">Get three months of Apple TV+. free when you Mua ngay an Apple device.</h3>
               <div class="top__title--links">
                 <a href="" class="white"
-                  >Xem thêm <img src="./img/icons/arrow-29-32-white.png" alt=""
+                  >Xem thêm <img src="./public/img/icons/arrow-29-32-white.png" alt=""
                 /></a>
                 <a href="" class="white"
                   >Dùng thử miễn phí
-                  <img src="./img/icons/icons8-up-right-48-white.png" alt=""
+                  <img src="./public/img/icons/icons8-up-right-48-white.png" alt=""
                 /></a>
               </div>
             </div>
