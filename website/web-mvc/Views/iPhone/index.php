@@ -8,25 +8,23 @@
     href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
     rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/style_iPad.css" />
+    <link rel="stylesheet" href="./public/css/style_iPhone.css" />
     <link rel="icon" href="./img/icons/fav-icon-apple.png" type="image/x-icon" />
-    <title>iPad - Apple (Hoàng Anh)</title>
+    <title>iPhone - Apple (Hoàng Anh)</title>
 </head>
 <body>
         <!-- Header -->
         <header>
             <ul>
               <!-- <li><img src="./svg/apple.svg" alt="apple" /></li> -->
-              <li><a href="../index.html">Trang chủ</a></li>
+              <li><a href="./public/index.html">Trang chủ</a></li>
               <li><a href="mac/index.html">Mac</a></li>
               <li><a href="">iPad</a></li>
               <li><a href="">iPhone</a></li>
               <li><a href="">Watch</a></li>
-              <li><a href="">TV</a></li>
-              <li><a href="">Music</a></li>
-              <li><a href="">Support</a></li>
-              <li><a href="#"><img src="../svg/search.svg" alt="search" /></a></li>
-              <li><a href="#"><img src="../svg/shopping-bag.svg" alt="shopping bag" /></a></li>
+              <li><a href="">Hỗ trợ</a></li>
+              <li><a href="#"><img src="./public/svg/search.svg" alt="search" /></a></li>
+              <li><a href="#"><img src="./public/svg/shopping-bag.svg" alt="shopping bag" /></a></li>
             </ul>
         </header>
 
@@ -35,39 +33,47 @@
                     <ul>
                         <li>
                           <a href="#">
-                            <img src="../svg/iPad/ipadpro_light.svg" alt="iPad" />
+                            <img src="./public/svg/iPhone/iphone_13_pro_light.svg" alt="iPhone" />
                               <p class="text-under-logos">
-                                iPad Pro
+                                iPhone 13 Pro
                               </p>
                             </a>
                         </li>
                         <li>
                           <a href="#">
-                            <img src="../svg/iPad/ipad_air_light.svg" alt="iPad" />
+                            <img src="./public/svg/iPhone/iphone_13_light.svg" alt="iPhone" />
                               <p class="text-under-logos">
-                                iPad Air
+                                iPhone 13
                               </p>
                             </a>
                         </li>
                         <li>
                           <a href="#">
-                            <img src="../svg/iPad/ipad_light.svg" alt="iPad" />
+                            <img src="./public/svg/iPhone/iphone_12_light.svg" alt="iPhone" />
                               <p class="text-under-logos">
-                                iPad
+                                iPhone 12
                               </p>
                             </a>
                         </li>
                         <li>
                           <a href="#">
-                            <img src="../svg/iPad/ipad_mini_light.svg" alt="iPad" />
+                            <img src="./public/svg/iPhone/iphone_se_light.svg" alt="iPhone" />
                               <p class="text-under-logos">
-                                iPad mini
+                                iPhone SE
                               </p>
                             </a>
                         </li>
                         <li>
                           <a href="#">
-                            <img src="../svg/iPad/mac_compare.svg" alt="iPad" />
+                            <img src="./public/svg/iPhone/iphone_11_light.svg" alt="iPhone" />
+                              <p class="text-under-logos">
+                                iPhone 11
+                              </p>
+                            </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <img src="./public/svg/iPhone/iphone_compare_light.svg" alt="iPhone" />
                               <p class="text-under-logos">
                                 Compare
                               </p>
@@ -75,23 +81,7 @@
                         </li>
                         <li>
                           <a href="#">
-                            <img src="../svg/iPad/apple_pencil_light.svg" alt="iPad" />
-                              <p class="text-under-logos">
-                                Apple Pencil
-                              </p>
-                            </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <img src="../svg/iPad/keyboard_light.svg" alt="iPad" />
-                              <p class="text-under-logos">
-                                Keyboards
-                              </p>
-                            </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <img  style="width: 30px;" src="../svg/iPad/airpods_light.svg" alt="iPad" />
+                            <img src="./public/svg/iPhone/airpods_light.svg" alt="iPhone" />
                               <p class="text-under-logos">
                                 AirPods
                               </p>
@@ -99,9 +89,17 @@
                         </li>
                         <li>
                           <a href="#">
-                            <img  style="width: 30px;" src="../svg/iPad/ipad_os_light.svg" alt="iPad" />
+                            <img  style="width: 30px;" src="./public/svg/iPhone/airtag_light.svg" alt="iPhone" />
                               <p class="text-under-logos">
-                                iPadOS
+                                AirTag
+                              </p>
+                            </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <img  style="width: 30px;" src="./public/svg/iPhone/iphone_ios_light.svg" alt="iPhone" />
+                              <p class="text-under-logos">
+                                iOS 15
                               </p>
                             </a>
                         </li>
@@ -114,17 +112,18 @@
                   <!-- SECTIONS -->
                   <!-- section1 -->
                   <section class="section1">
+                    <div style="width: 100%; height: 85px; background-color: black;"></div>
                     <div
                       class="background"
-                      style="background: url('../img/iPad/intro_ipad_mini.jpg') top center / auto no-repeat;"
+                      style="background: url('./public/img/iPhone/intro_iPhone12.jpg') top center / cover no-repeat;"
                     ></div>
 
-                    <div class="left_title">
-                      <img src="../img/logos/iPadMini.png" alt="iPAd">
-                      <h3>Mega power. Mini sized.</h3>
-                      <div class="left_title--links">
+                    <div class="top__title">
+                      <h3>iPhone 13 Pro</h3>
+                      <h1>Oh. So. Pro.</h1>
+                      <div class="top__title--links">
                         <a class="btn-buy" href="">Mua ngay</a>
-                        <a href="">Xem thêm <img src="../svg/right-arrow-blue.svg" alt="learn more"/></a>
+                        <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
                       </div>
                     </div>
                   </section>
@@ -135,53 +134,34 @@
                   <section class="section12">
                     <div
                       class="background12"
-                      style="background: url('../img/iPad/intro_ipad_10_2.jpg') center / auto no-repeat;"
+                      style="background: url('./public/img/iPhone/intro_iphone_13_pro_hero.png') bottom center / auto no-repeat;"
                     ></div>
 
-                    <div class="right_title">
-                      <h1>iPad</h1>
-                      <h3>Delightfully capable.</h3>
-                      <h3>Surprisingly affordable.</h3>
-                      <div class="right_title--links">
-                        <a class="btn-buy" href="">Mua ngay</a>
-                        <a href="">Xem thêm <img src="../svg/right-arrow-blue.svg" alt="learn more"/></a>
-                      </div>
-                    </div>
-                  </section>
-                  <div class="space-15"></div>
-
-                  <!-- section3 -->
-                  <section class="section1">
-                    <div
-                      class="background"
-                      style="background: url('../img/iPad/intro_ipad_air.jpg') center / auto no-repeat;"
-                    ></div>
-
-                    <div class="left_title">
-                      <h1>iPad Air</h1>
-                      <h3>Powerful. Colorful. Wonderful.</h3>
-                      <div class="left_title--links">
-                        <a class="btn-buy" href="">Mua ngay</a>
-                        <a href="">Xem thêm <img src="../svg/right-arrow-blue.svg" alt="learn more"/></a>
-                      </div>
-                    </div>
-                  </section>
-                  <div class="space-15"></div>
-                  
-                  <!-- section4 -->
-                  <section class="section12">
-                    <div
-                      class="background"
-                      style="background: url('../img/iPad/intro_ipad_pro_hero.jpg') center / auto no-repeat;"
-                    ></div>
-
-                    <div class="top__title">
-                      <h1>iPad Pro</h1>
-                      <h3>The ultimate</h3>
-                      <h3>iPad experience.</h3>
+                    <div class="top__title" style="color: #1D1D1F;">
+                      <h3>iPhone 13</h3>
+                      <h1>Your new superpower.</h1>
                       <div class="top__title--links">
                         <a class="btn-buy" href="">Mua ngay</a>
-                        <a href="">Xem thêm <img src="../svg/right-arrow-blue.svg" alt="learn more"/></a>
+                        <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
+                      </div>
+                    </div>
+                  </section>
+                  <div class="space-15"></div>
+
+
+                  <!-- section3 -->
+                  <section class="section12">
+                    <div
+                      class="background12"
+                      style="background: url('./public/img/iPhone/iphone_13_hero.png') bottom center / auto no-repeat;"
+                    ></div>
+
+                    <div class="top__title" style="color: #1D1D1F; margin-top: 150px">
+                      <h3>iPhone 13</h3>
+                      <h1>Your new superpower.</h1>
+                      <div class="top__title--links">
+                        <a class="btn-buy" href="">Mua ngay</a>
+                        <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
                       </div>
                     </div>
                   </section>
@@ -190,24 +170,26 @@
                   <!-- section5 -->
                   <section class="section2">
                     <div class="top__title2">
-                      <h3 class="black">Which iPad is right for you?</h3>
+                      <h3 class="black">Which iPhone is right for you?</h3>
                     </div>
 
                     <!-- products detail -->
                     <div class="container-products">
                         <!-- Begin: Note-nook -->
                         <div class="note-book"">
+
+                          <!-- Begin: product1 -->
                           <div class="note-book-details">
-                            <img src="../svg/iPad/ipad_pro.png" alt="ipad" />
+                            <img src="./public/svg/iPhone/compare_iphone_13_pro_.jpg" alt="iphone" />
                             <div class="color-icon">
-                                <img src="../svg/iPad/icons/color_2.jpg" alt="color" />
+                                <img src="./public/svg/iPhone//icons/color_5_ip13_pro.png" alt="color" />
                             </div>
 
-                            <h3>iPad Pro</h3>
+                            <h3>iPhone 13 Pro</h3>
                             
                             <div class="buy-btn-details">
                                 <a class="btn-buy" href="">Mua ngay</a>
-                                <a href="">Xem thêm <img src="../svg/right-arrow-blue.svg" alt="learn more"/></a>
+                                <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
                             </div>
 
                             <!-- detail -->
@@ -216,35 +198,37 @@
 
                                   <!-- display -->
                                   <div class="display">
-                                    <h4>12.9-inch and 11-inch</h4>
-                                    <p>12.9-inch Liquid Retina XDR display</p>
-                                    <p>11-inch Liquid Retina display</p>
+                                    <h4>6.7″ or 6.1”</h4>
+                                    <p>All-screen OLED display</p>
+                                    <p>with ProMotion</p>
+                                  </div>
+
+                                  <div class="camera">
+                                    <img src="./public/svg/iPhone/icons/icon_13_pro_camera.png" alt="chipset" style="padding-top: 40px;">
+                                    <p>Pro camera system</p>
+                                    <p style="padding-bottom: 20px; opacity: .6;">Telephoto, Wide, Ultra Wide</p>
                                   </div>
 
                                   <div class="chip">
-                                    <img src="../svg/iPad/icons/m1_chip.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">Apple M1 chip</p>
-                                  </div>
-
-                                  <div class="usb">
-                                    <img src="../svg/iPad/icons/usbc_thunderbolt.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">USB-C, Thunderbolt / USB 4</p>
+                                    <img src="./public/svg/iPhone/icons/icon_a15.png" alt="chipset" style="padding-top: 40px;">
+                                    <p>A15 Bionic chip</p>
+                                    <p style="padding-bottom: 20px; opacity: .6;">5‑core GPU</p>
                                   </div>
 
                                   <div class="cellular">
-                                    <img src="../svg/iPad/icons/cellular_5g.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">5G cellular</p>
+                                    <img src="./public/svg/iPhone/icons/icon_5g.png" alt="chipset" style="padding-top: 40px;">
+                                    <p style="padding-bottom: 20px;">Superfast 5G cellular</p>
                                   </div>
 
-                                  <div class="pencil">
-                                    <img src="../svg/iPad/icons/pencil.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">Works with
-                                      Apple Pencil</p>
+                                  <div class="battery">
+                                    <img src="./public/svg/iPhone/icons/icon_battery.png" alt="chipset" style="padding-top: 40px;">
+                                    <p style="padding-bottom: 20px;">Up to 28 hours video
+                                      playback</p>
                                   </div>
 
-                                  <div class="keyboard ">
-                                    <img src="../svg/iPad/icons/magic_keyboard.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">Works with Magic Keyboard</p>
+                                  <div class="touch-id ">
+                                    <img src="./public/svg/iPhone/icons/icon_face_id.png" alt="faceid" style="padding-top: 40px;">
+                                    <p style="padding-bottom: 20px;">Face ID</p>
                                   </div>
 
 
@@ -255,17 +239,19 @@
                           </div>
                           <!-- end1 -->
 
+
+                          <!-- Begin: product2 -->
                           <div class="note-book-details">
-                            <img src="../svg/iPad/ipad_air.png" alt="ipad" />
+                            <img src="./public/svg/iPhone/compare_iphone_13_.jpg" alt="iphone" />
                             <div class="color-icon">
-                                <img src="../svg/iPad/icons/color_5.jpg" alt="color" />
+                                <img src="./public/svg/iPhone//icons/color_6_ip13.png" alt="color" />
                             </div>
 
-                            <h3>iPad Air</h3>
+                            <h3>iPhone 13</h3>
                             
                             <div class="buy-btn-details">
                                 <a class="btn-buy" href="">Mua ngay</a>
-                                <a href="">Xem thêm <img src="../svg/right-arrow-blue.svg" alt="learn more"/></a>
+                                <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
                             </div>
 
                             <!-- detail -->
@@ -274,35 +260,37 @@
 
                                   <!-- display -->
                                   <div class="display">
-                                    <h4>10.9-inch</h4>
-                                    <p>Liquid Retina display</p>
+                                    <h4>6.1″ or 5.4″</h4>
+                                    <p>All-screen OLED display</p>
                                     <p>&nbsp;</p>
                                   </div>
 
-                                  <div class="chip">
-                                    <img src="../svg/iPad/icons/a14_chip.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">A14 Bionic chip</p>
+                                  <div class="camera">
+                                    <img src="./public/svg/iPhone/icons/icon_13_camera.png" alt="camera" style="padding-top: 40px;">
+                                    <p>Advanced dual‑camera system</p>
+                                    <p style="padding-bottom: 20px; opacity: .6;">Wide, Ultra Wide</p>
                                   </div>
 
-                                  <div class="usb">
-                                    <img src="../svg/iPad/icons/usbc.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">USB-C connector</p>
+                                  <div class="chip">
+                                    <img src="./public/svg/iPhone/icons/icon_a15.png" alt="chipset" style="padding-top: 40px;">
+                                    <p>A15 Bionic chip</p>
+                                    <p style="padding-bottom: 20px; opacity: .6;">4‑core GPU</p>
                                   </div>
 
                                   <div class="cellular">
-                                    <img src="../svg/iPad/icons/cellular_4g.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">4G cellular</p>
+                                    <img src="./public/svg/iPhone/icons/icon_5g.png" alt="chipset" style="padding-top: 40px;">
+                                    <p style="padding-bottom: 20px;">Superfast 5G cellular</p>
                                   </div>
 
-                                  <div class="pencil">
-                                    <img src="../svg/iPad/icons/pencil.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">Works with
-                                      Apple Pencil</p>
+                                  <div class="battery">
+                                    <img src="./public/svg/iPhone/icons/icon_battery.png" alt="chipset" style="padding-top: 40px;">
+                                    <p style="padding-bottom: 20px;">Up to 19 hours video
+                                      playback</p>
                                   </div>
 
-                                  <div class="keyboard ">
-                                    <img src="../svg/iPad/icons/magic_keyboard.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">Works with Magic Keyboard</p>
+                                  <div class="touch-id ">
+                                    <img src="./public/svg/iPhone/icons/icon_face_id.png" alt="faceid" style="padding-top: 40px;">
+                                    <p style="padding-bottom: 20px;">Face ID</p>
                                   </div>
 
 
@@ -313,17 +301,18 @@
                           </div>
                           <!-- end2 -->
 
+
+                          <!-- Begin: product3 -->
                           <div class="note-book-details">
-                            <img src="../svg/iPad/ipad_10_2.png" alt="ipad" />
+                            <img src="./public/svg/iPhone/compare_iphone_se.jpg" alt="iphone" />
                             <div class="color-icon">
-                                <img src="../svg/iPad/icons/color_2.jpg" alt="color" />
+                                <img src="./public/svg/iPhone//icons/color_3.png" alt="color" />
                             </div>
 
-                            <h3>iPad</h3>
-                            
+                            <h3>iPhone <span>SE</span></h3>
                             <div class="buy-btn-details">
                                 <a class="btn-buy" href="">Mua ngay</a>
-                                <a href="">Xem thêm <img src="../svg/right-arrow-blue.svg" alt="learn more"/></a>
+                                <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
                             </div>
 
                             <!-- detail -->
@@ -332,35 +321,37 @@
 
                                   <!-- display -->
                                   <div class="display">
-                                    <h4>10.2-inch</h4>
-                                    <p>Retina display</p>
+                                    <h4>4.7″</h4>
+                                    <p>LCD display</p>
                                     <p>&nbsp;</p>
                                   </div>
 
-                                  <div class="chip">
-                                    <img src="../svg/iPad/icons/a13_chip.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">A13 Bionic chip</p>
+                                  <div class="camera">
+                                    <img src="./public/svg/iPhone/icons/icon_se_camera.png" alt="chipset" style="padding-top: 40px;">
+                                    <p>Single-camera system</p>
+                                    <p style="padding-bottom: 20px; opacity: .6;">Wide</p>
                                   </div>
 
-                                  <div class="usb">
-                                    <img src="../svg/iPad/icons/lightning.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">Lightning connector</p>
+                                  <div class="chip">
+                                    <img src="./public/svg/iPhone/icons/icon_a15.png" alt="chipset" style="padding-top: 40px;">
+                                    <p>A15 Bionic chip</p>
+                                    <p style="padding-bottom: 20px; opacity: .6;">5‑core GPU</p>
                                   </div>
 
                                   <div class="cellular">
-                                    <img src="../svg/iPad/icons/cellular_4g.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">4G cellular</p>
+                                    <img src="./public/svg/iPhone/icons/icon_5g.png" alt="chipset" style="padding-top: 40px;">
+                                    <p style="padding-bottom: 20px;">5G cellular</p>
                                   </div>
 
-                                  <div class="pencil">
-                                    <img src="../svg/iPad/icons/pencil.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">Works with
-                                      Apple Pencil</p>
+                                  <div class="battery">
+                                    <img src="./public/svg/iPhone/icons/icon_battery.png" alt="chipset" style="padding-top: 40px;">
+                                    <p style="padding-bottom: 20px;">Up to 15 hours video
+                                      playback</p>
                                   </div>
 
-                                  <div class="keyboard ">
-                                    <img src="../svg/iPad/icons/smart_keyboard.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">Works with Smart Keyboard</p>
+                                  <div class="touch-id ">
+                                    <img src="./public/svg/iPhone/icons/icon_touch_id.png" alt="faceid" style="padding-top: 40px;">
+                                    <p style="padding-bottom: 20px;">Touch ID</p>
                                   </div>
 
 
@@ -371,17 +362,19 @@
                           </div>
                           <!-- end3 -->
 
+
+                          <!-- Begin: product4 -->
                           <div class="note-book-details">
-                            <img src="../svg/iPad/ipad_mini.png" alt="ipad" />
+                            <img src="./public/svg/iPhone/compare_iphone_12.jpg" alt="iphone" />
                             <div class="color-icon">
-                                <img src="../svg/iPad/icons/color_4.jpg" alt="color" />
+                                <img src="./public/svg/iPhone//icons/color_6.png" alt="color" />
                             </div>
 
-                            <h3>iPad mini</h3>
+                            <h3>iPhone 12</h3>
                             
                             <div class="buy-btn-details">
                                 <a class="btn-buy" href="">Mua ngay</a>
-                                <a href="">Xem thêm <img src="../svg/right-arrow-blue.svg" alt="learn more"/></a>
+                                <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
                             </div>
 
                             <!-- detail -->
@@ -390,35 +383,37 @@
 
                                   <!-- display -->
                                   <div class="display">
-                                    <h4>8.3-inch</h4>
-                                    <p>Liquid Retina display</p>
+                                    <h4>6.1″ or 5.4″</h4>
+                                    <p>All-screen OLED display</p>
                                     <p>&nbsp;</p>
                                   </div>
 
-                                  <div class="chip">
-                                    <img src="../svg/iPad/icons/a15_chip.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">A15 Bionic chip</p>
+                                  <div class="camera">
+                                    <img src="./public/svg/iPhone/icons/icon_12_camera.png" alt="chipset" style="padding-top: 40px;">
+                                    <p>Dual‑camera system</p>
+                                    <p style="padding-bottom: 20px; opacity: .6;">Wide, Ultra Wide</p>
                                   </div>
 
-                                  <div class="usb">
-                                    <img src="../svg/iPad/icons/usbc.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">USB-C connector</p>
+                                  <div class="chip">
+                                    <img src="./public/svg/iPhone/icons/icon_a14.png" alt="chipset" style="padding-top: 40px;">
+                                    <p>A14 Bionic chip</p>
+                                    <p style="padding-bottom: 20px; opacity: .6;">&nbsp;</p>
                                   </div>
 
                                   <div class="cellular">
-                                    <img src="../svg/iPad/icons/cellular_5g.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">5G cellular</p>
+                                    <img src="./public/svg/iPhone/icons/icon_5g.png" alt="chipset" style="padding-top: 40px;">
+                                    <p style="padding-bottom: 20px;">Superfast 5G cellular</p>
                                   </div>
 
-                                  <div class="pencil">
-                                    <img src="../svg/iPad/icons/pencil.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">Works with
-                                      Apple Pencil</p>
+                                  <div class="battery">
+                                    <img src="./public/svg/iPhone/icons/icon_battery.png" alt="chipset" style="padding-top: 40px;">
+                                    <p style="padding-bottom: 20px;">Up to 17 hours video
+                                      playback</p>
                                   </div>
 
-                                  <div class="keyboard ">
-                                    <img src="../svg/iPad/icons/bluetooth_keyboard.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">Works with Bluetooth keyboards</p>
+                                  <div class="touch-id ">
+                                    <img src="./public/svg/iPhone/icons/icon_face_id.png" alt="faceid" style="padding-top: 40px;">
+                                    <p style="padding-bottom: 20px;">Face ID</p>
                                   </div>
 
 
@@ -428,6 +423,7 @@
                             
                           </div>
                           <!-- end4 -->
+
 
 
                           
@@ -448,55 +444,69 @@
 
                   <div class="space-30"></div>
                   <!-- section3 -->
-                  <section class="section3">
-                    <div class="background3" style="background-image: url(../img/iPad/airpods__.jpg)"></div>
+                  <section class="section3" style="margin-bottom: -50px;">
+                    <div class="background3" style="background-image: url(./public/img/iPhone/why_apple.jpg); background-size: cover; background-position: top center;"></div>
                     <!-- text inside -->
-                    <!-- <div class="top__title3">
-                      <h3>macOS Monterey</h3>
-                      <h1>Hiệu năng cao đáp ứng mọi nhu cầu làm việc.</h1>
-                      <h1>“Hi everyone.”</h1>
-                    </div> -->
+                    <div class="top__title" style="color: #1D1D1F; ">
+                      <h1 style="padding: 0 33%;">What’s the best way to buy an iPhone?</h1>
+                      <p style="font-size: 18px; padding: 18px 512px">There are lots of great options for purchasing an iPhone. Whether you buy from a retailer, a carrier, or online, finding the best option has never been so easy.</p>
+                    </div>
                   </section>
                   
                   <div class="space-30"></div>
+                  <div class="noi-bat" style="width: 100%; height: 200px; background-color: #f5f5f7; text-align: center; font-size: 28px; padding-top: 100px;">
+                    <h1>Featured accessories</h1>
+                  </div>
+
                   <!-- BEGIN: section3-img  -->
                   <section class="section3">
-                    <div class="background3" style="background-image: url(../img/iPad/why_ipad.jpg); top: 40px;  width: 60%;"></div>
+                    <div class="background3" style="background-image: url(./public/img/iPhone/magsafe_.jpg); top: 40px;  width: 140%;"></div>
                     
-                    <div class="right_title">
-                      <h1>Why iPad</h1>
-                      <p>Yes, it does that.</p>
-                      <p>And then some.</p>
-                      <div class="right_title--links">
-                        <a href="">Xem thêm <img src="../svg/right-arrow-blue.svg" alt="learn more"/></a>
-                      </div>
+                    <div class="left_title">
+                      <h1>MagSafe</h1>
+                      <p style="font-size: 18px; padding: 0 325px">Snap on a magnetic case, wallet, or both. And get faster wireless charging.</p>
                     </div>
                   </section>
 
-                  <div class="space-30"></div>
-                  <section class="section3">
-                    <div class="background3" style="background-image: url(../img/iPad/ipados_preview.jpg)"></div>
+                  <div class="space-15"></div>
+                  <section class="section3" style="margin-bottom: -80px;">
+                    <div class="background3" style="background-image: url(./public/img/iPhone/airtag.jpg); background-position: top left;"></div>
                     
-                    <div class="top__title" style="margin-top: 30px; margin-left: 0px;">
-                      <h1>iPadOS 15</h1>
-                      <h3>Work wonders. With ease.</h3>
+                    <div class="right_title">
+                      <h1>AirTag</h1>
+                      <p>Attach one to your keys. Put another in your backpack. If they’re misplaced, just use the Find My app.</p>
+                      <div class="right_title--links">
+                        <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
+                      </div>
+                  </section>
+
+                  <div class="space-15"></div>
+                  <section class="section3">
+                    <div class="background3" style="background-image: url(./public/img/iPhone/airpods.jpg);"></div>
+
+                    <div class="top__title" style="color: #1D1D1F;">
+                      <h1>AirPods</h1>
+                      <p style="font-size: 18px; padding: 0 600px;">Explore all AirPods models and find the best ones for you.</p>
                       <div class="top__title--links">
-                        <a href="">Xem thêm <img src="../svg/right-arrow-blue.svg" alt="learn more"/></a>
-                      </div>
-                  </section>
-
-                  <div class="space-30"></div>
-                  <section class="section3">
-                    <div class="background3" style="background-image: url(../img/iPad/icloud__.jpg); width: 60%;"></div>
-
-                    <div class="right_title">
-                      <h1>iCloud</h1>
-                      <p>The best place for all your photos, files, and more.</p>
-                      <div class="right_title--links">
-                        <a href="">Xem thêm <img src="../svg/right-arrow-blue.svg" alt="learn more"/></a>
+                        <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
                       </div>
                     </div>
                   </section>
+
+                  <div class="space-15"></div>
+                  <section class="section3" style="margin-bottom: -60px;">
+                    <div class="background3" style="background-image: url(./public/img/iPhone/ios15_preview.jpg); background-position: top center; background-size: cover;"></div>
+
+                    <div class="top__title" style="color: #1D1D1F; margin-top: 240px;">
+                      <h1>iOS 15</h1>
+                      <p style="font-size: 18px; padding: 0 600px;">In touch. In the moment.</p>
+                      <div class="top__title--links">
+                        <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
+                      </div>
+                    </div>
+                  </section>
+
+
                   <!-- END: section3-img  -->
                   
 

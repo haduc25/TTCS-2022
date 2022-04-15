@@ -32,14 +32,14 @@
                 <!-- User Account: style can be found in dropdown.less -->
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="../public/img/avatar.jpg"
+                        <img src="../public/img/avatar2.jpg"
                             class="user-image" alt="User Image">
                         <span class="hidden-xs"><?= $_SESSION['admin_name'] ?></span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header">
-                            <img src="../public/img/avatar.jpg"
+                            <img src="../public/img/avatar2.jpg"
                                 class="img-circle" alt="User Image">
 
                             <p>
@@ -71,7 +71,7 @@
         <!-- Sidebar user panel -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="../public/img/avatar.jpg" class="img-circle" alt="User Image">
+                <img src="../public/img/avatar2.jpg" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
                 <!-- <p><?php/*$checker[0]->ho_ten; */?>  <?php /*var_dump($checker[0]->ho_ten);*/ ?></p> -->
@@ -113,7 +113,7 @@
                     <li><a href="#"><i class="fa fa-circle-o"></i> Quản lý Apple Watch</a></li>
                     <li><a href="#"><i class="fa fa-circle-o"></i> Quản lý Apple TV</a></li>
                     <li><a href="#"><i class="fa fa-circle-o"></i> Quản lý Apple Music</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Quản lý Support</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> Quản lý Hỗ trợ</a></li>
                 </ul>
             </li>
 
