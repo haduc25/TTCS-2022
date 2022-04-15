@@ -11,15 +11,24 @@
     <link rel="stylesheet" href="./public/css/style_iPhone.css" />
     <link rel="icon" href="./img/icons/fav-icon-apple.png" type="image/x-icon" />
     <title>iPhone - Apple (Hoàng Anh)</title>
+    <style>
+      .space-200
+      {
+        width: 100%;
+        height: 200px;
+        background-color: #f5f5f7;
+        border-bottom: 2px solid #ccc;
+      }
+    </style>
 </head>
 <body>
         <!-- Header -->
         <header>
             <ul>
               <!-- <li><img src="./svg/apple.svg" alt="apple" /></li> -->
-              <li><a href="./public/index.html">Trang chủ</a></li>
-              <li><a href="mac/index.html">Mac</a></li>
-              <li><a href="">iPad</a></li>
+              <li><a href="./">Trang chủ</a></li>
+              <li><a href="mac">Mac</a></li>
+              <li><a href="ipad">iPad</a></li>
               <li><a href="">iPhone</a></li>
               <li><a href="">Watch</a></li>
               <li><a href="">Hỗ trợ</a></li>
@@ -75,7 +84,7 @@
                           <a href="#">
                             <img src="./public/svg/iPhone/iphone_compare_light.svg" alt="iPhone" />
                               <p class="text-under-logos">
-                                Compare
+                                So sánh
                               </p>
                             </a>
                         </li>
@@ -115,12 +124,13 @@
                     <div style="width: 100%; height: 85px; background-color: black;"></div>
                     <div
                       class="background"
-                      style="background: url('./public/img/iPhone/intro_iPhone12.jpg') top center / cover no-repeat;"
+                      style="background: url('./<?=$prd1[0]->img_sp?>') top center / cover no-repeat;"
                     ></div>
 
                     <div class="top__title">
-                      <h3>iPhone 13 Pro</h3>
-                      <h1>Oh. So. Pro.</h1>
+                      <!-- <h3>iPhone 13 Pro</h3> -->
+                      <h3><?=$prd1[0]->ten_sp?></h3>
+                      <h1><?=$prd1[0]->sub_ten_sp?></h1>
                       <div class="top__title--links">
                         <a class="btn-buy" href="">Mua ngay</a>
                         <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
@@ -134,12 +144,12 @@
                   <section class="section12">
                     <div
                       class="background12"
-                      style="background: url('./public/img/iPhone/intro_iphone_13_pro_hero.png') bottom center / auto no-repeat;"
+                      style="background: url('./<?= $prd2[0]->img_sp ?>') bottom center / auto no-repeat;"
                     ></div>
 
                     <div class="top__title" style="color: #1D1D1F;">
-                      <h3>iPhone 13</h3>
-                      <h1>Your new superpower.</h1>
+                      <h3><?= $prd2[0]->ten_sp ?></h3>
+                      <h1><?= $prd2[0]->sub_ten_sp ?></h1>
                       <div class="top__title--links">
                         <a class="btn-buy" href="">Mua ngay</a>
                         <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
@@ -153,12 +163,12 @@
                   <section class="section12">
                     <div
                       class="background12"
-                      style="background: url('./public/img/iPhone/iphone_13_hero.png') bottom center / auto no-repeat;"
+                      style="background: url('./<?= $prd3[0]->img_sp ?>') bottom center / auto no-repeat;"
                     ></div>
 
                     <div class="top__title" style="color: #1D1D1F; margin-top: 150px">
-                      <h3>iPhone 13</h3>
-                      <h1>Your new superpower.</h1>
+                      <h3><?= $prd3[0]->ten_sp ?></h3>
+                      <h1><?= $prd3[0]->sub_ten_sp ?></h1>
                       <div class="top__title--links">
                         <a class="btn-buy" href="">Mua ngay</a>
                         <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
@@ -170,22 +180,24 @@
                   <!-- section5 -->
                   <section class="section2">
                     <div class="top__title2">
-                      <h3 class="black">Which iPhone is right for you?</h3>
+                      <h3 class="black">iPhone nào phù hợp với bạn?</h3>
                     </div>
 
                     <!-- products detail -->
                     <div class="container-products">
                         <!-- Begin: Note-nook -->
                         <div class="note-book"">
+                        <?php foreach ($prd4item as $prd4i) 
+                        { ?>
 
                           <!-- Begin: product1 -->
                           <div class="note-book-details">
-                            <img src="./public/svg/iPhone/compare_iphone_13_pro_.jpg" alt="iphone" />
+                            <img src="./<?= $prd4i->img_sp ?>" alt="<?= $prd4i->ten_sp ?>" />
                             <div class="color-icon">
                                 <img src="./public/svg/iPhone//icons/color_5_ip13_pro.png" alt="color" />
                             </div>
 
-                            <h3>iPhone 13 Pro</h3>
+                            <h3><?= $prd4i->ten_sp ?></h3>
                             
                             <div class="buy-btn-details">
                                 <a class="btn-buy" href="">Mua ngay</a>
@@ -198,32 +210,31 @@
 
                                   <!-- display -->
                                   <div class="display">
-                                    <h4>6.7″ or 6.1”</h4>
-                                    <p>All-screen OLED display</p>
-                                    <p>with ProMotion</p>
+                                    <h4><?= $prd4i->screen ?></h4>
+                                    <p><?= $prd4i->sub_screen ?></p>
+                                    <p>&nbsp;</p>
                                   </div>
 
                                   <div class="camera">
                                     <img src="./public/svg/iPhone/icons/icon_13_pro_camera.png" alt="chipset" style="padding-top: 40px;">
-                                    <p>Pro camera system</p>
-                                    <p style="padding-bottom: 20px; opacity: .6;">Telephoto, Wide, Ultra Wide</p>
+                                    <p><?= $prd4i->camera ?></p>
+                                    <p style="padding-bottom: 20px; opacity: .6;"><?= $prd4i->sub_camera ?></p>
                                   </div>
 
                                   <div class="chip">
                                     <img src="./public/svg/iPhone/icons/icon_a15.png" alt="chipset" style="padding-top: 40px;">
-                                    <p>A15 Bionic chip</p>
-                                    <p style="padding-bottom: 20px; opacity: .6;">5‑core GPU</p>
+                                    <p><?= $prd4i->chipset ?></p>
+                                    <p style="padding-bottom: 20px; opacity: .6;"><?= $prd4i->sub_chipset ?></p>
                                   </div>
 
                                   <div class="cellular">
                                     <img src="./public/svg/iPhone/icons/icon_5g.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">Superfast 5G cellular</p>
+                                    <p style="padding-bottom: 20px;"><?= $prd4i->cellular ?></p>
                                   </div>
 
                                   <div class="battery">
                                     <img src="./public/svg/iPhone/icons/icon_battery.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">Up to 28 hours video
-                                      playback</p>
+                                    <p style="padding-bottom: 20px;"><?= $prd4i->battery ?></p>
                                   </div>
 
                                   <div class="touch-id ">
@@ -239,195 +250,7 @@
                           </div>
                           <!-- end1 -->
 
-
-                          <!-- Begin: product2 -->
-                          <div class="note-book-details">
-                            <img src="./public/svg/iPhone/compare_iphone_13_.jpg" alt="iphone" />
-                            <div class="color-icon">
-                                <img src="./public/svg/iPhone//icons/color_6_ip13.png" alt="color" />
-                            </div>
-
-                            <h3>iPhone 13</h3>
-                            
-                            <div class="buy-btn-details">
-                                <a class="btn-buy" href="">Mua ngay</a>
-                                <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
-                            </div>
-
-                            <!-- detail -->
-                            <div class="details-pro">
-                              <div class="detail-chip">
-
-                                  <!-- display -->
-                                  <div class="display">
-                                    <h4>6.1″ or 5.4″</h4>
-                                    <p>All-screen OLED display</p>
-                                    <p>&nbsp;</p>
-                                  </div>
-
-                                  <div class="camera">
-                                    <img src="./public/svg/iPhone/icons/icon_13_camera.png" alt="camera" style="padding-top: 40px;">
-                                    <p>Advanced dual‑camera system</p>
-                                    <p style="padding-bottom: 20px; opacity: .6;">Wide, Ultra Wide</p>
-                                  </div>
-
-                                  <div class="chip">
-                                    <img src="./public/svg/iPhone/icons/icon_a15.png" alt="chipset" style="padding-top: 40px;">
-                                    <p>A15 Bionic chip</p>
-                                    <p style="padding-bottom: 20px; opacity: .6;">4‑core GPU</p>
-                                  </div>
-
-                                  <div class="cellular">
-                                    <img src="./public/svg/iPhone/icons/icon_5g.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">Superfast 5G cellular</p>
-                                  </div>
-
-                                  <div class="battery">
-                                    <img src="./public/svg/iPhone/icons/icon_battery.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">Up to 19 hours video
-                                      playback</p>
-                                  </div>
-
-                                  <div class="touch-id ">
-                                    <img src="./public/svg/iPhone/icons/icon_face_id.png" alt="faceid" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">Face ID</p>
-                                  </div>
-
-
-                              </div>
-
-                            </div>
-                            
-                          </div>
-                          <!-- end2 -->
-
-
-                          <!-- Begin: product3 -->
-                          <div class="note-book-details">
-                            <img src="./public/svg/iPhone/compare_iphone_se.jpg" alt="iphone" />
-                            <div class="color-icon">
-                                <img src="./public/svg/iPhone//icons/color_3.png" alt="color" />
-                            </div>
-
-                            <h3>iPhone <span>SE</span></h3>
-                            <div class="buy-btn-details">
-                                <a class="btn-buy" href="">Mua ngay</a>
-                                <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
-                            </div>
-
-                            <!-- detail -->
-                            <div class="details-pro">
-                              <div class="detail-chip">
-
-                                  <!-- display -->
-                                  <div class="display">
-                                    <h4>4.7″</h4>
-                                    <p>LCD display</p>
-                                    <p>&nbsp;</p>
-                                  </div>
-
-                                  <div class="camera">
-                                    <img src="./public/svg/iPhone/icons/icon_se_camera.png" alt="chipset" style="padding-top: 40px;">
-                                    <p>Single-camera system</p>
-                                    <p style="padding-bottom: 20px; opacity: .6;">Wide</p>
-                                  </div>
-
-                                  <div class="chip">
-                                    <img src="./public/svg/iPhone/icons/icon_a15.png" alt="chipset" style="padding-top: 40px;">
-                                    <p>A15 Bionic chip</p>
-                                    <p style="padding-bottom: 20px; opacity: .6;">5‑core GPU</p>
-                                  </div>
-
-                                  <div class="cellular">
-                                    <img src="./public/svg/iPhone/icons/icon_5g.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">5G cellular</p>
-                                  </div>
-
-                                  <div class="battery">
-                                    <img src="./public/svg/iPhone/icons/icon_battery.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">Up to 15 hours video
-                                      playback</p>
-                                  </div>
-
-                                  <div class="touch-id ">
-                                    <img src="./public/svg/iPhone/icons/icon_touch_id.png" alt="faceid" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">Touch ID</p>
-                                  </div>
-
-
-                              </div>
-
-                            </div>
-                            
-                          </div>
-                          <!-- end3 -->
-
-
-                          <!-- Begin: product4 -->
-                          <div class="note-book-details">
-                            <img src="./public/svg/iPhone/compare_iphone_12.jpg" alt="iphone" />
-                            <div class="color-icon">
-                                <img src="./public/svg/iPhone//icons/color_6.png" alt="color" />
-                            </div>
-
-                            <h3>iPhone 12</h3>
-                            
-                            <div class="buy-btn-details">
-                                <a class="btn-buy" href="">Mua ngay</a>
-                                <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
-                            </div>
-
-                            <!-- detail -->
-                            <div class="details-pro">
-                              <div class="detail-chip">
-
-                                  <!-- display -->
-                                  <div class="display">
-                                    <h4>6.1″ or 5.4″</h4>
-                                    <p>All-screen OLED display</p>
-                                    <p>&nbsp;</p>
-                                  </div>
-
-                                  <div class="camera">
-                                    <img src="./public/svg/iPhone/icons/icon_12_camera.png" alt="chipset" style="padding-top: 40px;">
-                                    <p>Dual‑camera system</p>
-                                    <p style="padding-bottom: 20px; opacity: .6;">Wide, Ultra Wide</p>
-                                  </div>
-
-                                  <div class="chip">
-                                    <img src="./public/svg/iPhone/icons/icon_a14.png" alt="chipset" style="padding-top: 40px;">
-                                    <p>A14 Bionic chip</p>
-                                    <p style="padding-bottom: 20px; opacity: .6;">&nbsp;</p>
-                                  </div>
-
-                                  <div class="cellular">
-                                    <img src="./public/svg/iPhone/icons/icon_5g.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">Superfast 5G cellular</p>
-                                  </div>
-
-                                  <div class="battery">
-                                    <img src="./public/svg/iPhone/icons/icon_battery.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">Up to 17 hours video
-                                      playback</p>
-                                  </div>
-
-                                  <div class="touch-id ">
-                                    <img src="./public/svg/iPhone/icons/icon_face_id.png" alt="faceid" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">Face ID</p>
-                                  </div>
-
-
-                              </div>
-
-                            </div>
-                            
-                          </div>
-                          <!-- end4 -->
-
-
-
-                          
-
+                          <?php } ?> 
 
                         </div>
                         <!-- End: Note-nook -->
@@ -448,14 +271,14 @@
                     <div class="background3" style="background-image: url(./public/img/iPhone/why_apple.jpg); background-size: cover; background-position: top center;"></div>
                     <!-- text inside -->
                     <div class="top__title" style="color: #1D1D1F; ">
-                      <h1 style="padding: 0 33%;">What’s the best way to buy an iPhone?</h1>
-                      <p style="font-size: 18px; padding: 18px 512px">There are lots of great options for purchasing an iPhone. Whether you buy from a retailer, a carrier, or online, finding the best option has never been so easy.</p>
+                      <h1 style="padding: 0 33%;">Cách tốt nhất để mua một chiếc iPhone là gì?</h1>
+                      <p style="font-size: 18px; padding: 18px 512px">Có rất nhiều lựa chọn tuyệt vời để mua iPhone. Cho dù bạn mua từ nhà bán lẻ, nhà cung cấp dịch vụ hay trực tuyến, việc tìm kiếm lựa chọn tốt nhất chưa bao giờ dễ dàng đến thế.</p>
                     </div>
                   </section>
                   
                   <div class="space-30"></div>
                   <div class="noi-bat" style="width: 100%; height: 200px; background-color: #f5f5f7; text-align: center; font-size: 28px; padding-top: 100px;">
-                    <h1>Featured accessories</h1>
+                    <h1>Phụ kiện nổi bật</h1>
                   </div>
 
                   <!-- BEGIN: section3-img  -->
@@ -464,7 +287,7 @@
                     
                     <div class="left_title">
                       <h1>MagSafe</h1>
-                      <p style="font-size: 18px; padding: 0 325px">Snap on a magnetic case, wallet, or both. And get faster wireless charging.</p>
+                      <p style="font-size: 18px; padding: 0 325px">Gắn vào ốp điện thoại, ví hoặc cả hai. Và sạc không dây nhanh hơn.</p>
                     </div>
                   </section>
 
@@ -474,7 +297,7 @@
                     
                     <div class="right_title">
                       <h1>AirTag</h1>
-                      <p>Attach one to your keys. Put another in your backpack. If they’re misplaced, just use the Find My app.</p>
+                      <p>Gắn ngay một cái vào chìa khóa của bạn. Đặt một cái khác vào ba lô của bạn. Nếu chúng bị thất lạc, chỉ cần sử dụng ứng dụng Find My IPhone.</p>
                       <div class="right_title--links">
                         <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
                       </div>
@@ -486,7 +309,7 @@
 
                     <div class="top__title" style="color: #1D1D1F;">
                       <h1>AirPods</h1>
-                      <p style="font-size: 18px; padding: 0 600px;">Explore all AirPods models and find the best ones for you.</p>
+                      <p style="font-size: 18px; padding: 0 600px;">Khám phá tất cả các loại AirPods và tìm những loại phù hợp nhất cho bạn.</p>
                       <div class="top__title--links">
                         <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
                       </div>
@@ -522,138 +345,51 @@
                   <!-- FOOTER -->
                   <footer class="footer" style="margin-top: 60px;">
                     <div class="footer__wrapper">
-                      <ul>
-                        <li>1. Apple Fitness+ is coming late 2020.</li>
-                        <li>
-                          2. The Apple One free trial includes only services that you are not
-                          currently using through a free trial or a subscription. Plan
-                          automatically renews after trial until cancelled. Restrictions and
-                          other terms apply.
-                        </li>
-                        <li>
-                          iPhone 12 mini and iPhone 12 Pro Max have not been authorized as
-                          required by the rules of the Federal Communications Commission.
-                          iPhone 12 mini and iPhone 12 Pro Max are not, and may not be,
-                          offered for sale or lease, or sold or leased, until authorization is
-                          obtained.
-                        </li>
-                        <li>
-                          To access and use all the features of Apple Card, you must add Apple
-                          Card to Wallet on an iPhone or iPad with iOS 12.4 or later or
-                          iPadOS. To manage Apple Card Monthly Installments, you need an
-                          iPhone with iOS 13.2 or later or an iPad with iPadOS 13.2 or later.
-                          Update to the latest version of iOS or iPadOS by going to Settings >
-                          General > Software Update. Tap Download and Install.
-                        </li>
-                        <li>Available for qualifying applicants in the United States.</li>
-                        <li>
-                          Apple Card is issued by Goldman Sachs Bank USA, Salt Lake City
-                          Branch.
-                        </li>
-                        <li>
-                          Apple TV+ is $4.99/month after free trial. One subscription per
-                          Family Sharing group. Offer good for 3 months after eligible device
-                          activation. Plan automatically renews until cancelled. Restrictions
-                          and other terms apply.
-                        </li>
-                      </ul>
-
+                      <div class="space-200">
+                        <h1 style= "text-align: center; padding-top: 80px;">Công ty điện thoại Hoàng Anh</h1>
+                      </div>
                       <div class="footer__links">
                         <div class="footer__links--column">
-                          <div class="footer__links--column-title">Shop and Learn</div>
-                          <a href="">Mac</a>
-                          <a href="">iPad</a>
-                          <a href="">iPhone</a>
-                          <a href="">Watch</a>
-                          <a href="">Music</a>
-                          <a href="">AirPods</a>
-                          <a href="">HomePod</a>
-                          <a href="">iPod touch</a>
-                          <a href="">Accessories</a>
-                          <a href="">Gift Card</a>
+                          <div class="footer__links--column-title">Hotline Mua Hàng</div>
+                          <a href="">0969 740 337</a>
+                          <a href="">0964 302 678</a>
+                          <a href="">0973 652 911</a>
                         </div>
 
                         <div class="footer__links--column">
-                          <div class="footer__links--column-title">Services</div>
-                          <a href="">Apple Music</a>
-                          <a href="">Apple TV+</a>
-                          <a href="">Apple Fitness+</a>
-                          <a href="">Apple News+</a>
-                          <a href="">Apple Arcade</a>
-                          <a href="">iCloud</a>
-                          <a href="">Apple One</a>
-                          <a href="">Apple Card</a>
-                          <a href="">Apple Books</a>
-                          <a href="">App Store</a>
-                          <div class="footer__links--column-title">Account</div>
-                          <a href="">Manage Your Apple ID</a>
-                          <a href="">Apple Store Account</a>
-                          <a href="">iCloud.com</a>
+                          <div class="footer__links--column-title">Hotline CSKH</div>
+                          <a href="">1900 6706</a>
+                          <a href="">1900 8869</a>
+                          <a href="">1800 8168</a>
                         </div>
 
                         <div class="footer__links--column">
-                          <div class="footer__links--column-title">Apple Store</div>
-                          <a href="">Find a Store</a>
-                          <a href="">Shop Online</a>
-                          <a href="">Genius Bar</a>
-                          <a href="">Today at Apple</a>
-                          <a href="">Apple Camp</a>
-                          <a href="">Apple store App</a>
-                          <a href="">Refurbished and Clearance</a>
-                          <a href="">Apple Trade In</a>
-                          <a href="">Order Status</a>
-                          <a href="">Shopping Help</a>
+                          <div class="footer__links--column-title">Email CSKH</div>
+                          <a href="">hoanganh1206@gmail.com </a>
                         </div>
 
                         <div class="footer__links--column">
-                          <div class="footer__links--column-title">For Business</div>
-                          <a href="">Apple and Business</a>
-                          <a href="">Shop and Business</a>
-                          <div class="footer__links--column-title">For Education</div>
-                          <a href="">Apple and Education</a>
-                          <a href="">Shop for K-12</a>
-                          <a href="">Shop College</a>
-                          <div class="footer__links--column-title">For Healthcare</div>
-                          <a href="">Apple in Healthcare</a>
-                          <a href="">Health on Apple Watch</a>
-                          <a href="">Health Records on iPhone</a>
-                          <div class="footer__links--column-title">For Government</div>
-                          <a href="">Shop for Government</a>
-                          <a href="">Shop for Veterans and Military</a>
+                          <div class="footer__links--column-title">Giấy phép kinh doanh số</div>
+                          <a href="">41G8079632</a>
                         </div>
 
                         <div class="footer__links--column">
-                          <div class="footer__links--column-title">Apple Values</div>
-                          <a href="">Accessibility</a>
-                          <a href="">Education</a>
-                          <a href="">Environment</a>
-                          <a href="">Inclusion and Diversity</a>
-                          <a href="">Privacy</a>
-                          <a href="">Supplier Responsibility</a>
-                          <div class="footer__links--column-title">About Apple</div>
-                          <a href="">Newsroom</a>
-                          <a href="">Apple Leadership</a>
-                          <a href="">Job Opportunities</a>
-                          <a href="">Investors</a>
-                          <a href="">Events</a>
-                          <a href="">Contact Apple</a>
+                          <div class="footer__links--column-title">Mạng xã hội</div>
+                          <a href="">Facebook</a>
+                          <a href="">Zalo</a>
+                          <a href="">Youtube</a>
+                          <a href="">Twitter</a>
+                          <a href="">Instagram</a>
                         </div>
-                      </div>
-
-                      <div class="footer__more">
-                        More ways to shop: <a href="">Find an Apple Store</a> or
-                        <a href="">other retailer</a> near you. Or call 1-800-MY-APPLE.
                       </div>
 
                       <div class="footer__copyright">
-                        <p>Copyright © 2020 Apple Inc. All rights reserved.</p>
-                        <a href="">United States</a>
+                        <p>Copyright © 2022 Hoàng Anh. All rights reserved.</p>
+                        <a href="">Việt Nam</a>
 
                         <div class="links">
-                          <a href="">Privacy Policy</a>
-                          <a href="">Terms of Use</a>
-                          <a href="">Sales and Refunds</a>
-                          <a href="">Site Map</a>
+                          <a href="">Chính sách bảo mật</a>
+                          <a href="">Điều khoản sử dụng</a>
                         </div>
                       </div>
                     </div>

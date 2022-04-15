@@ -43,16 +43,12 @@ class ProductsController
     
     public function index_iPhone()
     {
-        $prd1 = Products::get1items(6, 2);
-        $prd2 = Products::get1items(7, 2);
-        $prd3 = Products::get1items(8, 2);
-        $prd4 = Products::get1items(9, 2);
+        $prd1 = Products::get1items(1, 3);
+        $prd2 = Products::get1items(47, 3);
+        $prd3 = Products::get1items(48, 3);
         // var_dump($prd4item); exit;
 
-        $prd4item = Products::getNitems(2, 4);
-
-        // $prd3item = Products::getNitems2(4);
-        // $prd3item = Products::get3items();
+        $prd4item = Products::getNitems(3, 4); //(id_dm, limit)
 
         //import index view (home)
         require_once 'Views/iPhone/index.php';

@@ -27,6 +27,7 @@ class AdminController
 
         $products_1 = $prd->getAllAdmin(1);
         $products_2 = $prd->getAllAdmin(2);
+        $products_3 = $prd->getAllAdmin(3);
 
         $this->_index_pages = "home";
         $this->_name_h1_1 = "Quản lý sản phẩm";
