@@ -55,7 +55,8 @@
         display: inline-block;
         width: 120px;
         height: 120px;
-        background-image: url('./public/img/emoji.png');
+        /* background-image: url('./public/img/emoji.png'); */
+        background-image: url('https://dongnai.dcs.vn/admin/Uploads/FileDungChung/2020/11/emoji_03062938579.png');
         background-size: cover;
         -webkit-transform: scale(1.4);
             -ms-transform: scale(1.4);
@@ -117,9 +118,9 @@
 			<div class="notfound-404">
 				<h1>4<span></span>4</h1>
 			</div>
-			<h2>Oops! Page Not Be Found</h2>
-			<p>Sorry but the page you are looking for does not exist, have been removed. name changed or is temporarily unavailable</p>
-			<a href="./index.php">Back to homepage</a>
+			<h2>Oops! Không tìm thấy trang</h2>
+			<p>Xin lỗi nhưng trang bạn đang tìm kiếm không tồn tại, đã bị xóa. tên đã thay đổi hoặc tạm thời không có sẵn</p>
+			<a href="./">Quay lại trang chủ</a>
 		</div>
 	</div>
 </body>
