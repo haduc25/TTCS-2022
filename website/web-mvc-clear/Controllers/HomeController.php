@@ -16,6 +16,11 @@ class HomeController
         require_once 'Views/index.php';
     }
 
+    public function page404()
+    {
+        require_once 'Views/page_404.php';
+    }
+
 }
 
 ?>

@@ -106,7 +106,9 @@
             break;
 
         default:
-            echo "error 404 ! Page not found... :<";
+            $ctl = new HomeController();
+            $ctl->page404();
+            break;
     }
 
 ?>
