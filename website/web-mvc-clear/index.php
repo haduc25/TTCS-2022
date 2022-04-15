@@ -105,6 +105,22 @@
             $ctl->changePassword2();
             break;
 
+
+
+        //add cart
+        case 'add-cart':
+            // echo "pages cart";
+            $ctl = new ProductsController();
+            $ctl->pages_cart();
+            break;
+
+        //add cart
+        case 'add-cart/add':
+            // echo "wanna them vao cart";
+            $ctl = new ProductsController();
+            // $ctl->index();
+            break;
+
         default:
             $ctl = new HomeController();
             $ctl->page404();

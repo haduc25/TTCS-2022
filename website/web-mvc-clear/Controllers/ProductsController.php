@@ -38,6 +38,18 @@ class ProductsController
         //import index view (home)
         require_once 'Views/iPhone/index.php';
     }
+    
+    public function pages_cart()
+    {
+        // $prd1 = Products::get1items(1, 3);
+        // $prd2 = Products::get1items(47, 3);
+        // $prd3 = Products::get1items(48, 3);
+
+        // $prd4item = Products::getNitems(3, 4); //(id_dm, limit)
+
+        //import index view (home)
+        require_once 'Views/cart/index.php';
+    }
 
 }
 

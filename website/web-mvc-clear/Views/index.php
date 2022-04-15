@@ -32,7 +32,7 @@
         <li><a href="">Watch</a></li>
         <li><a href="">Hỗ trợ</a></li>
         <li><a href="#"><img src="./public/svg/search.svg" alt="search" /></a></li>
-        <li><a href="#"><img src="./public/svg/shopping-bag.svg" alt="shopping bag" /></a></li>
+        <li><a href="add-cart"><img src="./public/svg/shopping-bag.svg" alt="shopping bag" /></a></li>
       </ul>
     </header>
     <!-- SECTIONS -->
@@ -49,7 +49,7 @@
           <a href=""
             >Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt=""
           /></a>
-          <a href="">Mua ngay <img src="./public/svg/right-arrow-blue.svg" alt="" /></a>
+          <a href="add-cart/add?id=<?= $prd1[0]->id_sp ?>">Mua ngay <img src="./public/svg/right-arrow-blue.svg" alt="" /></a>
         </div>
       </div>
     </section>

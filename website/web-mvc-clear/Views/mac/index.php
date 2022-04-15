@@ -33,7 +33,7 @@
               <li><a href="">Watch</a></li>
               <li><a href="">Hỗ trợ</a></li>
               <li><a href="#"><img src="./public/svg/search.svg" alt="search" /></a></li>
-              <li><a href="#"><img src="./public/svg/shopping-bag.svg" alt="shopping bag" /></a></li>
+              <li><a href="add-cart"><img src="./public/svg/shopping-bag.svg" alt="shopping bag" /></a></li>
             </ul>
         </header>
 
