@@ -32,11 +32,11 @@ class BaseModel
         return $rs;
     }
 
-    //select 3 items detail from sql
-    public static function get3items()
+    //select n items detail from sql
+    public static function getNitems($id, $limit)
     {
         $model = new static();
-        $sql = "select * from `products_detail`, `products` where products_detail.id_sp = products.id_sp limit 3";
+        $sql = "select * from `products_detail`, `products` where products_detail.id_sp = products.id_sp and products.id_dm = $id limit $limit";
         $stmt = $model->conn->prepare($sql);
         $stmt->execute();
         $rs = $stmt->fetchAll(PDO::FETCH_CLASS, get_class($model));
@@ -44,17 +44,18 @@ class BaseModel
 
     }
 
-    //select n items detail have limit from sql
-    public static function getNitems($limit)
-    {
-        $model = new static();
-        $sql = "select * from `products_detail`, `products` where products_detail.id_sp = products.id_sp limit $limit";
-        $stmt = $model->conn->prepare($sql);
-        $stmt->execute();
-        $rs = $stmt->fetchAll(PDO::FETCH_CLASS, get_class($model));
-        return $rs;
 
-    }
+    // //select n items detail have limit from sql
+    // public static function getNitems($id_sp, $id_dm)
+    // {
+    //     $model = new static();
+    //     $sql = "select * from $model->tName where id_sp = $id_sp and id_dm = $id_dm;
+    //     $stmt = $model->conn->prepare($sql);
+    //     $stmt->execute();
+    //     $rs = $stmt->fetchAll(PDO::FETCH_CLASS, get_class($model));
+    //     return $rs;
+
+    // }
 
     //select all admin voi category = macbook
     public static function getAllAdmin($category)

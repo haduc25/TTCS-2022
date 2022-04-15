@@ -8,9 +8,9 @@ class ProductsController
     {
         //$prds: products
         //gán bien prds tro den function -> all() (lay tat ca dl trong bang)
-        $prd1item = Products::get1items(2 ,1);
+        $prd1item = Products::get1items(2, 1);
         
-        $prd3item = Products::get3items();
+        $prd3item = Products::getNitems(1, 3);
 
         //import index view (home)
         require_once 'Views/mac/index.php';
@@ -21,11 +21,20 @@ class ProductsController
         //$prds: products
         //gán bien prds tro den function -> all() (lay tat ca dl trong bang)
         // $prd1item = Products::get1items(2 ,1);
-        $prd4item = Products::getNitems(4);
+        $prd1 = Products::get1items(6, 2);
+        $prd2 = Products::get1items(7, 2);
+        $prd3 = Products::get1items(8, 2);
+        $prd4 = Products::get1items(9, 2);
         // var_dump($prd4item); exit;
+
+
+        $prd4item = Products::getNitems(2, 4);
+
+        // $prd3item = Products::getNitems2(4);
+
         
         
-        $prd3item = Products::get3items();
+        // $prd3item = Products::get3items();
 
         //import index view (home)
         require_once 'Views/iPad/index.php';

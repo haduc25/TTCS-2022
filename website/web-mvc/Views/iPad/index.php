@@ -24,7 +24,7 @@
               <li><a href="">Watch</a></li>
               <li><a href="">TV</a></li>
               <li><a href="">Music</a></li>
-              <li><a href="">Support</a></li>
+              <li><a href="">Hỗ trợ</a></li>
               <li><a href="#"><img src="./public/svg/search.svg" alt="search" /></a></li>
               <li><a href="#"><img src="./public/svg/shopping-bag.svg" alt="shopping bag" /></a></li>
             </ul>
@@ -116,16 +116,18 @@
                   <section class="section1">
                     <div
                       class="background"
-                      style="background: url('./public/img/iPad/intro_ipad_mini.jpg') top center / auto no-repeat;"
+                      style="background: url('./<?=$prd1[0]->img_sp; ?>') top center / auto no-repeat;"
+
                     ></div>
 
                     <div class="left_title">
                       <img src="./public/img/logos/iPadMini.png" alt="iPAd">
-                      <h3>Mega power. Mini sized.</h3>
-                      <?php var_dump($prd4item[0]->img_sp); exit; ?>
+                      <!-- <h3>Mega power. Mini sized.</h3> -->
+                      <h3><?=$prd1[0]->sub_ten_sp; ?></h3>
+                      
                       <div class="left_title--links">
-                        <a class="btn-buy" href="">Mua ngay</a>
-                        <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
+                        <a class="btn-buy" href="#">Mua ngay</a>
+                        <a href="#">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
                       </div>
                     </div>
                   </section>
@@ -136,16 +138,15 @@
                   <section class="section12">
                     <div
                       class="background12"
-                      style="background: url('./public/img/iPad/intro_ipad_10_2.jpg') center / auto no-repeat;"
+                      style="background: url('./<?=$prd2[0]->img_sp; ?>') center / auto no-repeat;"
                     ></div>
 
                     <div class="right_title">
-                      <h1>iPad</h1>
-                      <h3>Delightfully capable.</h3>
-                      <h3>Surprisingly affordable.</h3>
+                      <h1><?=$prd2[0]->ten_sp; ?></h1>
+                      <h3><?=$prd2[0]->sub_ten_sp; ?></h3>
                       <div class="right_title--links">
-                        <a class="btn-buy" href="">Mua ngay</a>
-                        <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
+                        <a class="btn-buy" href="#">Mua ngay</a>
+                        <a href="#">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
                       </div>
                     </div>
                   </section>
@@ -155,15 +156,16 @@
                   <section class="section1">
                     <div
                       class="background"
-                      style="background: url('./public/img/iPad/intro_ipad_air.jpg') center / auto no-repeat;"
+                      style="background: url('./<?=$prd3[0]->img_sp; ?>') center / auto no-repeat;"
                     ></div>
 
                     <div class="left_title">
-                      <h1>iPad Air</h1>
-                      <h3>Powerful. Colorful. Wonderful.</h3>
+                      <!-- <h1>iPad Air</h1> -->
+                      <h1><?=$prd3[0]->ten_sp; ?></h1>
+                      <h3><?=$prd3[0]->sub_ten_sp; ?></h3>
                       <div class="left_title--links">
-                        <a class="btn-buy" href="">Mua ngay</a>
-                        <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
+                        <a class="btn-buy" href="#">Mua ngay</a>
+                        <a href="#">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
                       </div>
                     </div>
                   </section>
@@ -173,16 +175,15 @@
                   <section class="section12">
                     <div
                       class="background"
-                      style="background: url('./public/img/iPad/intro_ipad_pro_hero.jpg') center / auto no-repeat;"
+                      style="background: url('./<?=$prd4[0]->img_sp; ?>') center / auto no-repeat;"
                     ></div>
 
                     <div class="top__title">
-                      <h1>iPad Pro</h1>
-                      <h3>The ultimate</h3>
-                      <h3>iPad experience.</h3>
+                      <h1><?=$prd4[0]->ten_sp; ?></h1>
+                      <h3><?=$prd4[0]->sub_ten_sp; ?></h3>
                       <div class="top__title--links">
-                        <a class="btn-buy" href="">Mua ngay</a>
-                        <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
+                        <a class="btn-buy" href="#">Mua ngay</a>
+                        <a href="#">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
                       </div>
                     </div>
                   </section>
@@ -191,24 +192,26 @@
                   <!-- section5 -->
                   <section class="section2">
                     <div class="top__title2">
-                      <h3 class="black">Which iPad is right for you?</h3>
+                      <h3 class="black">iPad nào phù hợp với bạn?</h3>
                     </div>
 
                     <!-- products detail -->
                     <div class="container-products">
                         <!-- Begin: Note-nook -->
                         <div class="note-book"">
+                        <?php foreach ($prd4item as $prd4i) 
+                        { ?>
                           <div class="note-book-details">
-                            <img src="./public/svg/iPad/ipad_pro.png" alt="ipad" />
+                            <img src="./<?=$prd4i->img_sp; ?>" alt="<?=$prd4i->ten_sp; ?>" />
                             <div class="color-icon">
                                 <img src="./public/svg/iPad/icons/color_2.jpg" alt="color" />
                             </div>
 
-                            <h3>iPad Pro</h3>
+                            <h3><?=$prd4i->ten_sp; ?></h3>
                             
                             <div class="buy-btn-details">
-                                <a class="btn-buy" href="">Mua ngay</a>
-                                <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
+                                <a class="btn-buy" href="#">Mua ngay</a>
+                                <a href="#">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
                             </div>
 
                             <!-- detail -->
@@ -217,37 +220,35 @@
 
                                   <!-- display -->
                                   <div class="display">
-                                    <h4>12.9-inch and 11-inch</h4>
-                                    <p>12.9-inch Liquid Retina XDR display</p>
-                                    <p>11-inch Liquid Retina display</p>
+                                    <h4><?=$prd4i->screen ?></h4>
+                                    <p><?=$prd4i->sub_screen ?></p>
+                                    <p>&nbsp;</p>
                                   </div>
 
                                   <div class="chip">
                                     <img src="./public/svg/iPad/icons/m1_chip.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">Apple M1 chip</p>
+                                    <p style="padding-bottom: 20px;"><?=$prd4i->chipset ?></p>
                                   </div>
 
                                   <div class="usb">
                                     <img src="./public/svg/iPad/icons/usbc_thunderbolt.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">USB-C, Thunderbolt / USB 4</p>
+                                    <p style="padding-bottom: 20px;">USB-C / USB 4</p>
                                   </div>
 
                                   <div class="cellular">
                                     <img src="./public/svg/iPad/icons/cellular_5g.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">5G cellular</p>
+                                    <p style="padding-bottom: 20px;"><?=$prd4i->cellular ?></p>
                                   </div>
 
                                   <div class="pencil">
                                     <img src="./public/svg/iPad/icons/pencil.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">Works with
-                                      Apple Pencil</p>
+                                    <p style="padding-bottom: 20px;">Apple Pencil</p>
                                   </div>
 
                                   <div class="keyboard ">
                                     <img src="./public/svg/iPad/icons/magic_keyboard.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">Works with Magic Keyboard</p>
+                                    <p style="padding-bottom: 20px;">Magic Keyboard</p>
                                   </div>
-
 
                               </div>
 
@@ -255,184 +256,7 @@
                             
                           </div>
                           <!-- end1 -->
-
-                          <div class="note-book-details">
-                            <img src="./public/svg/iPad/ipad_air.png" alt="ipad" />
-                            <div class="color-icon">
-                                <img src="./public/svg/iPad/icons/color_5.jpg" alt="color" />
-                            </div>
-
-                            <h3>iPad Air</h3>
-                            
-                            <div class="buy-btn-details">
-                                <a class="btn-buy" href="">Mua ngay</a>
-                                <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
-                            </div>
-
-                            <!-- detail -->
-                            <div class="details-pro">
-                              <div class="detail-chip">
-
-                                  <!-- display -->
-                                  <div class="display">
-                                    <h4>10.9-inch</h4>
-                                    <p>Liquid Retina display</p>
-                                    <p>&nbsp;</p>
-                                  </div>
-
-                                  <div class="chip">
-                                    <img src="./public/svg/iPad/icons/a14_chip.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">A14 Bionic chip</p>
-                                  </div>
-
-                                  <div class="usb">
-                                    <img src="./public/svg/iPad/icons/usbc.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">USB-C connector</p>
-                                  </div>
-
-                                  <div class="cellular">
-                                    <img src="./public/svg/iPad/icons/cellular_4g.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">4G cellular</p>
-                                  </div>
-
-                                  <div class="pencil">
-                                    <img src="./public/svg/iPad/icons/pencil.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">Works with
-                                      Apple Pencil</p>
-                                  </div>
-
-                                  <div class="keyboard ">
-                                    <img src="./public/svg/iPad/icons/magic_keyboard.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">Works with Magic Keyboard</p>
-                                  </div>
-
-
-                              </div>
-
-                            </div>
-                            
-                          </div>
-                          <!-- end2 -->
-
-                          <div class="note-book-details">
-                            <img src="./public/svg/iPad/ipad_10_2.png" alt="ipad" />
-                            <div class="color-icon">
-                                <img src="./public/svg/iPad/icons/color_2.jpg" alt="color" />
-                            </div>
-
-                            <h3>iPad</h3>
-                            
-                            <div class="buy-btn-details">
-                                <a class="btn-buy" href="">Mua ngay</a>
-                                <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
-                            </div>
-
-                            <!-- detail -->
-                            <div class="details-pro">
-                              <div class="detail-chip">
-
-                                  <!-- display -->
-                                  <div class="display">
-                                    <h4>10.2-inch</h4>
-                                    <p>Retina display</p>
-                                    <p>&nbsp;</p>
-                                  </div>
-
-                                  <div class="chip">
-                                    <img src="./public/svg/iPad/icons/a13_chip.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">A13 Bionic chip</p>
-                                  </div>
-
-                                  <div class="usb">
-                                    <img src="./public/svg/iPad/icons/lightning.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">Lightning connector</p>
-                                  </div>
-
-                                  <div class="cellular">
-                                    <img src="./public/svg/iPad/icons/cellular_4g.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">4G cellular</p>
-                                  </div>
-
-                                  <div class="pencil">
-                                    <img src="./public/svg/iPad/icons/pencil.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">Works with
-                                      Apple Pencil</p>
-                                  </div>
-
-                                  <div class="keyboard ">
-                                    <img src="./public/svg/iPad/icons/smart_keyboard.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">Works with Smart Keyboard</p>
-                                  </div>
-
-
-                              </div>
-
-                            </div>
-                            
-                          </div>
-                          <!-- end3 -->
-
-                          <div class="note-book-details">
-                            <img src="./public/svg/iPad/ipad_mini.png" alt="ipad" />
-                            <div class="color-icon">
-                                <img src="./public/svg/iPad/icons/color_4.jpg" alt="color" />
-                            </div>
-
-                            <h3>iPad mini</h3>
-                            
-                            <div class="buy-btn-details">
-                                <a class="btn-buy" href="">Mua ngay</a>
-                                <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
-                            </div>
-
-                            <!-- detail -->
-                            <div class="details-pro">
-                              <div class="detail-chip">
-
-                                  <!-- display -->
-                                  <div class="display">
-                                    <h4>8.3-inch</h4>
-                                    <p>Liquid Retina display</p>
-                                    <p>&nbsp;</p>
-                                  </div>
-
-                                  <div class="chip">
-                                    <img src="./public/svg/iPad/icons/a15_chip.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">A15 Bionic chip</p>
-                                  </div>
-
-                                  <div class="usb">
-                                    <img src="./public/svg/iPad/icons/usbc.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">USB-C connector</p>
-                                  </div>
-
-                                  <div class="cellular">
-                                    <img src="./public/svg/iPad/icons/cellular_5g.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">5G cellular</p>
-                                  </div>
-
-                                  <div class="pencil">
-                                    <img src="./public/svg/iPad/icons/pencil.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">Works with
-                                      Apple Pencil</p>
-                                  </div>
-
-                                  <div class="keyboard ">
-                                    <img src="./public/svg/iPad/icons/bluetooth_keyboard.png" alt="chipset" style="padding-top: 40px;">
-                                    <p style="padding-bottom: 20px;">Works with Bluetooth keyboards</p>
-                                  </div>
-
-
-                              </div>
-
-                            </div>
-                            
-                          </div>
-                          <!-- end4 -->
-
-
-                          
-
+                          <?php } ?> 
 
                         </div>
                         <!-- End: Note-nook -->
@@ -465,11 +289,11 @@
                     <div class="background3" style="background-image: url(./public/img/iPad/why_ipad.jpg); top: 40px;  width: 60%;"></div>
                     
                     <div class="right_title">
-                      <h1>Why iPad</h1>
+                      <h1>Tại sao là iPad?</h1>
                       <p>Yes, it does that.</p>
                       <p>And then some.</p>
                       <div class="right_title--links">
-                        <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
+                        <a href="#">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
                       </div>
                     </div>
                   </section>
@@ -480,9 +304,9 @@
                     
                     <div class="top__title" style="margin-top: 30px; margin-left: 0px;">
                       <h1>iPadOS 15</h1>
-                      <h3>Work wonders. With ease.</h3>
+                      <h3>Làm việc một cách dễ dàng.</h3>
                       <div class="top__title--links">
-                        <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
+                        <a href="#">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
                       </div>
                   </section>
 
@@ -492,9 +316,9 @@
 
                     <div class="right_title">
                       <h1>iCloud</h1>
-                      <p>The best place for all your photos, files, and more.</p>
+                      <p>Nơi tốt nhất để lưu tất cả ảnh, tệp của bạn và hơn thế nữa.</p>
                       <div class="right_title--links">
-                        <a href="">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
+                        <a href="#">Xem thêm <img src="./public/svg/right-arrow-blue.svg" alt="learn more"/></a>
                       </div>
                     </div>
                   </section>
