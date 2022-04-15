@@ -23,13 +23,12 @@ class AdminController
     public function login()
     {
         $admin = new Admin();
+        $prd = new Products();
 
-        /**doan nay phai sua lai lay tu bang products*/
-        $products_1 = $admin->getAllAdmin(1);
-        $products_2 = $admin->getAllAdmin(2);
+        $products_1 = $prd->getAllAdmin(1);
+        $products_2 = $prd->getAllAdmin(2);
 
         $this->_index_pages = "home";
-
         $this->_name_h1_1 = "Quản lý sản phẩm";
         
 
@@ -300,6 +299,28 @@ class AdminController
 		// $users->insert();
 		// header("Location: ../index.php");
     }
+
+
+    
+
+    //admin -> del
+    public function create_pages_del()
+    {
+        // $this->_name_h1_1 = "Thêm sản phẩm";
+        // require_once "Views/admin/admin_del.php";
+        ?>
+        <script>
+        if (confirm('Are you sure you want to save this thing into the database?')) {
+            // Save it!
+            console.log('Thing was saved to the database.');
+          } else {
+            // Do nothing!
+            console.log('Thing was not saved to the database.');
+          }
+        </script>
+          <?php
+    }
+
 
     
     //change_password2

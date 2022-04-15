@@ -59,6 +59,20 @@
             $ctl->admin_insert();
             break;
 
+        //admin/del
+        case 'admin/login/del':
+            $ctl = new AdminController();
+            // echo "click to del";
+            $ctl->create_pages_del();
+            break;
+
+        //admin/insert-prod
+        case 'admin/login/insert-prod1':
+            $ctl = new AdminController();
+            // echo "click to insert-prod";
+            //$ctl->admin_insert();
+            break;
+
 
 
 

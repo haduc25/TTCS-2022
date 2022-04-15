@@ -30,7 +30,7 @@
                             <td><img src="../<?= $prd_1->img_sp ?>" alt="<?=$prd_1->ten_sp ?>" width="150"></td>
                             <td><?=$prd_1->sl_sp ?></td>
                             <td><a href="#" class="btn btn-admin">Chỉnh sửa</a></td>
-                            <td><a href="#" class="btn btn-admin">Xóa</a></td>
+                            <td><a href="login/del?id=<?=$prd_1->id_sp?>" class="btn btn-admin">Xóa</a></td>
                         </tr>
                 <?php } ?>
 
