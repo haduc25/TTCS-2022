@@ -30,8 +30,6 @@
         <li><a href="ipad">iPad</a></li>
         <li><a href="iphone">iPhone</a></li>
         <li><a href="">Watch</a></li>
-        <li><a href="">TV</a></li>
-        <li><a href="">Music</a></li>
         <li><a href="">Hỗ trợ</a></li>
         <li><a href="#"><img src="./public/svg/search.svg" alt="search" /></a></li>
         <li><a href="#"><img src="./public/svg/shopping-bag.svg" alt="shopping bag" /></a></li>
