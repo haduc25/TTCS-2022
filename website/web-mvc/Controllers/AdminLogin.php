@@ -382,6 +382,65 @@ class AdminController
         if (isset($_GET['id']) && !empty($_GET['id'])) 
         {
             $prd = new Products();
+
+            $_tensp = $_POST['tensp'];
+            $_sub_tensp = $_POST['sub_tensp'];
+            $_slsp = $_POST['slsp'];
+            $_imgsp = $_FILES['imgsp'];
+            $fileName = $_imgsp['name']; //set name 
+            $fileName = null;
+
+            // var_dump($_SESSION['img']); exit;
+            // var_dump($_imgsp); exit;
+    
+
+
+            //neu co img va k co anh update
+            if(!empty($_SESSION['img']) && isset($_SESSION['img']) && $_imgsp['size'] > 0)
+            {
+                //giu nguyen img k update
+                
+            }else
+            {
+                //update
+                if($_imgsp['size'] > 0)
+                {
+                    //neu co img update
+                    $fileName = 'upload/'.time()."-".$_imgsp['name'];
+                }
+    
+                if(move_uploaded_file($_imgsp['tmp_name'], $fileName))
+                {
+                    //have image
+                    // $sql.=" ,avatar=:avatar";
+                }else
+                {
+                    //no image
+                    $fileName = null;
+                }
+
+                $prd->img_sp = $fileName;
+            }
+            
+            $prd->id_dm = 1;
+            $prd->ten_sp = $_tensp;
+            $prd->sub_ten_sp = $_sub_tensp;
+            $prd->sl_sp = $_slsp;
+
+
+            $prd->update($_GET['id']);
+            echo "done";
+
+            // if(!empty($_id_dm) && isset($_id_dm))
+            // {
+            //     $products->id_dm = $_id_dm;
+            // }
+
+            // $products->id_dm = "1";
+
+
+
+
 			// echo $_GET['id'];
 			// var_dump($_GET['id']); exit();
 

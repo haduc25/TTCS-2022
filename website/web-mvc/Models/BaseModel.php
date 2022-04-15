@@ -108,9 +108,9 @@ class BaseModel
     }
 
     //edit
-    function update(){
-        $this->queryBuilder = "update $this->tableName set ";
-
+    function update($id){
+        $this->queryBuilder = "update $this->tName set ";
+        // var_dump($id); exit;
         foreach ($this->columns as $col) {
             if($this->{$col} == null){
                 continue;
@@ -119,8 +119,9 @@ class BaseModel
         }
 
         $this->queryBuilder = rtrim($this->queryBuilder, ", ");
+        // var_dump($this->queryBuilder); exit;
 
-        $this->queryBuilder .= " where ma_sp = $this->ma_sp";
+        $this->queryBuilder .= " where id_sp = $id";
 
         
         $stmt = $this->conn->prepare($this->queryBuilder);
