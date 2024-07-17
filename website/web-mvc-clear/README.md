@@ -46,14 +46,5 @@
    - Truy cập vào phpMyAdmin (thường là `http://localhost/phpmyadmin`).
    - Nhập file cơ sở dữ liệu từ `web_gtsp.sql` vào cơ sở dữ liệu.
 
-4. **Cấu hình kết nối cơ sở dữ liệu:**
-   - Mở file `config/database.php` và điều chỉnh các thông số kết nối tới MySQL:
-     ```php
-     define('DB_HOST', 'localhost');
-     define('DB_USER', 'root'); // Tên người dùng MySQL
-     define('DB_PASS', ''); // Mật khẩu MySQL
-     define('DB_NAME', 'web_gtsp'); // Tên cơ sở dữ liệu đã tạo
-     ```
-
 5. **Chạy ứng dụng:**
    - Mở trình duyệt và truy cập vào địa chỉ `http://localhost/website/web-mvc-clear`.
